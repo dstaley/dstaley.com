@@ -1,0 +1,11 @@
+---
+title: Moto X Randomizer
+layout: page
+---
+<p><img class="half pull-right" src="/img/phone_randomizer_framed.png" /></p>
+<p>If I've ever seen just how <em>awesome</em> the web can be, it was when I launched a simple website that generated random color combinations for Motorola's <a href="http://motorola.com/motox">Moto X</a> smartphone. After launching the site, <a href="http://www.reddit.com/r/Android/comments/1weo0o/thinking_about_a_moto_x_but_cant_decide_what/">I posted a link to reddit</a> and <a href="https://twitter.com/dstaley/status/428227937221869568">sent out a tweet</a>. Over the next 24 hours, over 8,000 people from over 100 countries visited my little site. Even <a href="https://twitter.com/Motorola/status/428581093990608896">Motorola saw it</a>. Needless to say I was in awe.</p>
+<p>Several things about this experience stand out to me. First was my ability to rapidly iterate based on the feedback I received. Most notably, I was able to go from <a href="http://www.reddit.com/r/MotoX/comments/1wdzy8/need_moto_x_design_ideas_i_made_a_random_moto_x/cf15msx">receiving feedback</a> to <a href="http://www.reddit.com/r/MotoX/comments/1wdzy8/need_moto_x_design_ideas_i_made_a_random_moto_x/cf18pyq">delivering the requested feature</a> in under two hours. Another thing that really made the experience such a delight was the ability to closely monitor incoming traffic. I discovered that several blogs had written about the site, including many in languages other than English. (Another fun thing was passing those articles through Google Translate to see what they said!)</p>
+<p><img src="/img/tablet_randomizer_framed.png" /></p>
+<p>The site is a Flask app with an Ember frontend hosted on a single dyno on Heroku. To be honest, I was quite surprised that I was able to maintain a response time of less than 200ms, despite the heavy traffic. It was the first Python app I've deployed into production, and the fact it handled the load beautifully is a testament to the work the community has put into developing battle-hardened software such as <a href="http://www.gevent.org/">gevent</a> and <a href="http://gunicorn.org/">gunicorn</a>.</p>
+<p><a href="http://randommoto.me" class="button">View Site</a></p>
+<p><a href="https://github.com/dstaley/randommotome" class="button">View on GitHub</a></p>
