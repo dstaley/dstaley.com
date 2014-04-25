@@ -5,3 +5,4 @@ description: "Write an awesome description for your new site here. It will appea
 url: "http://yourdomain.com"
 sass:
   sass_dir: css
+  style: :compressed
