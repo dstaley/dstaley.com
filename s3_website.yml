@@ -6,7 +6,8 @@ s3_bucket: api.dstaley.me
 # See README for more detailed info on each of them.
 
 max_age:
-  "public/*": 6000
+  "css/*": 604800
+  "js/*": 604800
   "*": 300
 
 gzip:
