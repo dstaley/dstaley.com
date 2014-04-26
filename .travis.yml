@@ -1,7 +1,7 @@
 language: ruby
 cache: bundler
 rvm:
-- 2.1.1
+- 2.1.0
 script: bundle exec jekyll build
 install: bundle install
 after_success: bundle exec s3_website push --headless
