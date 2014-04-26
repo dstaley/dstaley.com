@@ -7,7 +7,7 @@ title: Projects
 	<h2>{{ category.name }}</h2>
 	{% for project in category.projects %}
 		<div class="project">
-			<a href="/projects/{{ project.link }}">{{ project.name }}</a>
+			<a href="/projects/{{ project.link }}/">{{ project.name }}</a>
 			<p>{{ project.description }}</p>
 		</div>
 	{% endfor %}
