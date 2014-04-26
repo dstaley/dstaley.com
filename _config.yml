@@ -2,7 +2,7 @@ name: Dylan Staley
 markdown: redcarpet
 highlighter: pygments
 description: "The blog and portfolio of Dylan Staley."
-domain: dstaley.me
+domain: api.dstaley.me
 url: "http://dstaley.me"
 exclude: ['Gemfile', 's3_website.yml']
 sass:
