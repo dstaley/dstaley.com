@@ -22,7 +22,8 @@
                   <li>@dstaley</li>
                 </ul>
               </address>
-              <ul class="navigation">
+              <nav role="navigation">
+              <ul>
                 <li><a href="/about/">About</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/projects/">Projects</a></li>
@@ -31,9 +32,10 @@
                 <li><a href="https://github.com/dstaley">{% include github.svg %} GitHub</a></li>
                 <li><a href="https://twitter.com/dstaley">{% include twitter.svg %} Twitter</a></li>
               </ul>
+              </nav>
           </aside>
 
-          <main><article>{{ content }}</article></main>
+          <main role="main"><article>{{ content }}</article></main>
 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
