@@ -273,6 +273,10 @@ main {
     }
 }
 
+.social a {
+    text-decoration: none;
+}
+
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     word-break: break-word;

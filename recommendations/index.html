@@ -4,10 +4,10 @@ layout: page
 ---
 {% for recommendation in site.data.recommendations %}
 <article class="recommendation">
-<blockquote>
-	<p>{{ recommendation.excerpt }}</p>
-	<footer>{{ recommendation.name }} - {{recommendation.position }}</footer>
-</blockquote>
+	<blockquote>
+		<p>{{ recommendation.excerpt }}</p>
+		<footer>{{ recommendation.name }} - {{ recommendation.position }}</footer>
+	</blockquote>
 	<a href="{{ recommendation.file }}" class="button">
 		Read {{ recommendation.short_name }}'s Letter
 	</a>
