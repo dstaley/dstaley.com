@@ -4,6 +4,10 @@
     name: "Development"
     projects: 
       - 
+        name: "around"
+        link: "around"
+        description: "around is an anonymous, realtime, location-based messenger designed to connect you with people nearby. Built with Ember.js, Firebase, and Ratchet. Available on the web with iOS and Android apps coming soon."
+      - 
         name: "Moto X Randomizer"
         link: "moto-x-randomizer"
         description: "Can't decide on one of the 6,160 different possible color combinations for the Moto X? Moto X Randomizer generates random configurations for you! Built with Ember.js and Flask."
