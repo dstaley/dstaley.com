@@ -5,5 +5,4 @@ layout: page
 <p><img class="half pull-right" src="/img/phone_thankful_framed.png" /></p>
 <p>This past Thanksgiving, I asked my friends (read: my Twitter followers) to share the things they were thankful for. Originally, I built the site using server-side rendering and server-sent events. However, when I came across Firebase's <a href="https://github.com/firebase/emberFire">emberFire</a>, I knew that I wanted to use it for <em>something</em>. The end result is something I am, well, thankful for!</p>
 <p>The SMS functionality is provided by <a href="https://www.twilio.com/">Twilio</a>, which sends a callback to <a href="http://www.sinatrarb.com/">Sinatra</a> application on <a href="https://www.heroku.com/">Heroku</a>. After successful signature verification (to ensure the callback actually came from Twilio), the message is then added to a <a href="https://www.firebase.com/">Firebase</a> collection which updates any connected clients in real-time.</p>
-<p><a href="http://dstaley.me/thankful/" class="button">View Site</a></p>
 <p><a href="https://github.com/dstaley/thankful" class="button">View on GitHub</a></p>

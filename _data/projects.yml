@@ -4,6 +4,10 @@
     name: "Development"
     projects: 
       - 
+        name: "JARVIS"
+        link: "jarvis"
+        description: "JARVIS is an inventory management system built for LSU to keep track of AV equipment rentals. Built with Ember.js and Flask."
+      - 
         name: "around"
         link: "around"
         description: "around is an anonymous, realtime, location-based messenger designed to connect you with people nearby. Built with Ember.js, Firebase, and Ratchet. Available on the web with iOS and Android apps coming soon."
