@@ -1,6 +1,6 @@
 title: Dylan Staley
 description: "Dylan Staley, Web Developer and purveyor of cute puppy pics."
-baseurl: "/"
+baseurl: ""
 url: "https://dstaley.com"
 markdown: kramdown
 exclude: [vendor, 'Gemfile', 'Gemfile.lock', 's3_website.yml']
