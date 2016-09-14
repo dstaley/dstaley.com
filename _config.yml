@@ -1,10 +1,6 @@
-name: Dylan Staley
-markdown: redcarpet
-highlighter: pygments
-description: "The blog and portfolio of Dylan Staley."
-domain: api.dstaley.me
-url: "http://dstaley.me"
-exclude: ['Gemfile', 's3_website.yml']
-sass:
-  sass_dir: css
-  style: :compressed
+title: Dylan Staley
+description: "Dylan Staley, Web Developer and purveyor of cute puppy pics."
+baseurl: "/"
+url: "https://dstaley.com"
+markdown: kramdown
+exclude: [vendor, 'Gemfile', 'Gemfile.lock', 's3_website.yml']
