@@ -9,6 +9,13 @@
       {{ content }}
     </div>
 
+    <amp-font layout="nodisplay"
+      font-family="Fira Sans"
+      timeout="3000"
+      on-load-add-class="firasans-font-loaded"
+      on-error-add-class="firasans-font-missing">
+    </amp-font>
+
     <amp-analytics type="googleanalytics" id="google-analytics">
       <script type="application/json">
         {

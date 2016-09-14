@@ -1,8 +1,32 @@
-body {
-  font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('/fonts/fira-sans/FiraSans-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('/fonts/fira-sans/FiraSans-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$system-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+html {
+  font-family: $system-sans-serif;
   color: #333;
   line-height: 1.6;
   font-size: 18px;
+
+  &.firasans-font-loaded {
+    font-family: 'Fira Sans', $system-sans-serif;
+  }
+}
+
+body {
+  animation: none;
 }
 
 header {
