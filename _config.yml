@@ -4,3 +4,6 @@ baseurl: ""
 url: "https://dstaley.com"
 markdown: kramdown
 exclude: [vendor, 'Gemfile', 'Gemfile.lock', 's3_website.yml']
+sass:
+    style: compressed
+permalink: pretty
