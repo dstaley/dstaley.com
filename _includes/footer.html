@@ -1,0 +1,35 @@
+{% include fontfaceobserver.html %}
+<script type="text/javascript" data-turbolinks-eval="false">
+  var firaSans = new FontFaceObserver('Fira Sans');
+  firaSans.load(null, 5000).then(function() {
+    document.documentElement.className += " firasans-font-loaded";
+  });
+</script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.min.js"
+  data-turbolinks-eval="false"
+  integrity="sha384-ND4myJLW9aF52/wCgKmHFbiMgY1SZbMGdGK+/mZtGT5Lq9pnUL2DUzjUIqLBp816"
+  crossorigin="anonymous"
+  async
+  defer
+></script>
+
+<script data-turbolinks-eval="false">
+  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+  ga('create','UA-50952314-1','auto');ga('send','pageview')
+</script>
+<script
+  src="https://www.google-analytics.com/analytics.js"
+  data-turbolinks-eval="false"
+  async
+  defer
+></script>
+<script type="text/javascript" data-turbolinks-eval="false">
+  document.addEventListener('turbolinks:load', function(event) {
+    if (typeof ga === 'function') {
+      ga('set', 'location', event.data.url);
+      ga('send', 'pageview');
+    }
+  });
+</script>

@@ -1,24 +1,29 @@
 @font-face {
   font-family: 'Fira Sans';
-  src: url('/fonts/fira-sans/FiraSans-Regular.otf') format('opentype');
+  src: url('/fonts/fira-sans/woff2/FiraSans-Regular.woff2') format('woff2'),
+       url('/fonts/fira-sans/woff2/FiraSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Fira Sans';
-  src: url('/fonts/fira-sans/FiraSans-Bold.otf') format('opentype');
+  src: url('/fonts/fira-sans/woff2/FiraSans-Bold.woff2') format('woff2'),
+       url('/fonts/fira-sans/woff2/FiraSans-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
 $system-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$system-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$body-color: #333;
+$link-color: lighten($body-color, 25%);
 
 html {
+  color: $body-color;
   font-family: $system-sans-serif;
-  color: #333;
-  line-height: 1.6;
   font-size: 18px;
+  line-height: 1.6;
 
   &.firasans-font-loaded {
     font-family: 'Fira Sans', $system-sans-serif;
@@ -31,33 +36,114 @@ body {
 
 header {
   text-align: center;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .home-nav {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    a {
+      text-decoration: none;
+      color: lighten($link-color, 20%);
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+
   @media screen and (min-width: 1024px) {
     text-align: left;
   }
+}
+
+pre {
+  border: 1px solid #e5e9ef;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+code {
+  white-space: pre-wrap;
+  background: #f3f3f3;
+  font-family: $system-monospace;
+}
+
+.highlight code {
+  background: none;
 }
 
 .container {
   margin: 0 auto;
   padding: 0 20px;
   padding-top: 60px;
+
   @media screen and (min-width: 1024px) {
     width: 700px;
   }
 }
 
-.my-name {
+.my-name,
+.post-title {
   margin: 0;
+  margin-bottom: 0.5rem;
+  line-height: 3rem;
 }
 
 a {
-  color: #888;
-  font-weight: bold;
+  color: $body-color;
+
+  &:hover {
+    color: lighten($body-color, 30%);
+  }
 }
 
-.links {
-  margin-top: 0;
+.links,
+.meta {
   font-size: 12px;
+  margin-top: 0;
+
   a {
     margin-right: 10px;
   }
+}
+
+.highlight {
+  margin: 1em 0;
+}
+
+.post-meta {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.post-subtitle {
+  margin: 0.5rem 0;
+}
+
+.post-header {
+  .post-subtitle {
+    font-size: 1rem;
+    color: lighten($body-color, 30%);
+  }
+}
+
+.post-list {
+  a {
+    text-decoration: none;
+  }
+}
+
+.post-body {
+  img {
+    width: 100%;
+  }
+}
+
+.bio {
+  margin-bottom: 3rem;
 }
