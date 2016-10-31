@@ -1,5 +1,6 @@
 ---
 layout: post
+hasOpengraph: true
 hasCode: true
 title: Migrating to Stencil
 subtitle: About a year ago, I helped build a new website for Marucci Sports. Almost exactly a year later, we rebuilt the site from the ground up using Stencil, a new theme framework from Bigcommerce.
