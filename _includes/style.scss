@@ -81,6 +81,7 @@ code {
   margin: 0 auto;
   padding: 0 20px;
   padding-top: 60px;
+  margin-bottom: 2rem;
 
   @media screen and (min-width: 1024px) {
     width: 700px;
@@ -110,6 +111,10 @@ a {
   a {
     margin-right: 10px;
   }
+}
+
+.post-list-item {
+  margin-bottom: 0.75rem;
 }
 
 .highlight {
