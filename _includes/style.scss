@@ -133,3 +133,28 @@ a {
 .bio {
   margin-bottom: 3rem;
 }
+
+.gigabit-map {
+  margin: 0;
+
+  iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+  }
+
+  figcaption {
+    text-align: right;
+    font-style: italic;
+    color: lighten($body-color, 30%);
+    font-size: 14px;
+  }
+
+  a {
+    color: lighten($body-color, 30%);
+
+    &:hover {
+      color: $body-color;
+    }
+  }
+}
