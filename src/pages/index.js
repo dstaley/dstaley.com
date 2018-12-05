@@ -56,6 +56,7 @@ const IndexPage = props => (
         content={props.data.site.siteMetadata.description}
       />
       <link rel="canonical" href={props.data.site.siteMetadata.url} />
+      <meta name="theme-color" content="tomato" />
     </Helmet>
     <Header>
       <MyName>
