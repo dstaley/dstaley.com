@@ -1,4 +1,0 @@
-localhost:8080 {
-  root ./_site
-  gzip
-}
