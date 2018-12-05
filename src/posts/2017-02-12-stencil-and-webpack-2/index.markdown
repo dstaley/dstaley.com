@@ -3,13 +3,17 @@ layout: post
 hasOpengraph: true
 hasCode: true
 title: Stencil and Webpack 2
+slug: stencil-and-webpack-2
 subtitle: With the recent release of Webpack 2, I wanted to see how easy it would be to migrate Stencil to it, and if I could take advantage of automatic code splitting.
+date: "2017-02-12T00:00:00Z"
 ---
+
 Over the past few weeks I've read a lot about code splitting, or the idea of delivering just the JavaScript needed to run the current page/route. Code splitting is an attempt to balance the benefits and drawbacks to large client-side applications. Instead of downloading and parsing all of the JavaScript for your entire application, you can deliver just a portion. As users navigate to new routes within your application, the code necessary for them is downloaded on the fly. Initial page load times are quicker thanks to less JavaScript being downloaded, but subsequent page loads of new routes have to download a small amount of JavaScript. It's all about finding a balance that's right for your application and users.
 
 Since code splitting works by mapping modules to routes, I wanted to see if I could apply the strategy to Stencil, which already has a good one-module-per-route setup. The first step though was to upgrade to Webpack 2, which I knew had quite a few breaking changes.
 
 ## Upgrading to Webpack 2
+
 [Annotated Commit](https://github.com/dstaley/stencil-webpack-2/commit/470b55e6557bf4f852e43cf7d7032e2249f10270)
 
 Since some of the default Stencil dependencies rely on Webpack 1, I had to upgrade them along with Webpack.
@@ -41,6 +45,7 @@ The thing that made this error really strange is that manually running `webpack`
 After disabling the polyfill, `stencil start` was able to properly call Webpack and build the bundle! So now it was time to move on to the difficult part.
 
 ## Code Splitting
+
 [Annotated Commit](https://github.com/dstaley/stencil-webpack-2/commit/4776bf964a35c9b2b87b54db066ad8558b9727e2)
 
 Since Stencil already ships with a very nicely modularized structure, adding code splitting was surprisingly easy. Every page on a Stencil-based site has page type, and each page type has a module containing the functionality for that page type. The first step was to remove all the imports, and redefine them as calls to `System.import`. So this:
@@ -58,6 +63,7 @@ became
 Since `System.import` uses a network request to load the module, it returns a Promise. I had to make some slight adjustments to how Stencil invokes the module to accommodate for this:
 
 ```js
+// Comment
 const pageTypePromise = pages.get(templateFile);
 if (pageTypePromise !== false) {
   pageTypePromise().then(PageTypeFn => {
