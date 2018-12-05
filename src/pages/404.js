@@ -13,6 +13,7 @@ const NotFoundPage = props => (
         content={props.data.site.siteMetadata.description}
       />
       <link rel="canonical" href={props.data.site.siteMetadata.url} />
+      <meta name="theme-color" content="tomato" />
     </Helmet>
     <HomeLink />
     <h1>Thonk!</h1>

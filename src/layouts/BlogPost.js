@@ -86,6 +86,7 @@ class BlogPostTemplate extends Component {
         <Helmet>
           <title>{post.frontmatter.title}</title>
           <meta name="description" content={post.frontmatter.subtitle} />
+          <meta name="theme-color" content="tomato" />
         </Helmet>
         {post.frontmatter.hasOpengraph ? (
           <OpenGraph
