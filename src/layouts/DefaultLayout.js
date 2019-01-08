@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import styled from "@emotion/styled";
 import { Global } from "@emotion/core";
+import { Helmet } from "react-helmet";
 
 const globalStyle = {
   html: {
@@ -33,15 +34,18 @@ const Container = styled("div")`
   margin: 0 auto;
   padding: 0 20px;
   padding-top: 60px;
-  margin-bottom: 2rem;
+  margin-bottom: 12rem;
 
   @media screen and (min-width: 1024px) {
-    width: 630px;
+    width: 650px;
   }
 `;
 
 const DefaultLayout = props => (
   <Fragment>
+    <Helmet>
+      <link rel="shortcut icon" href="/img/rocket.png" />
+    </Helmet>
     <Global styles={globalStyle} />
     <Container>{props.children}</Container>
   </Fragment>
