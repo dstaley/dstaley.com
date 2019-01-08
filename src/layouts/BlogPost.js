@@ -43,10 +43,13 @@ const PostBody = styled("main")`
   }
 
   & pre {
-    border: 1px solid #e5e9ef;
+    border-radius: 4px;
     padding: 0.5rem;
+    margin-bottom: 2em;
     font-size: 0.75rem;
     overflow-x: scroll;
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2),
+      0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
 
     & code {
       background: none;
@@ -58,6 +61,11 @@ const PostBody = styled("main")`
       monospace;
     white-space: pre-wrap;
     background: #f3f3f3;
+  }
+
+  & p > code,
+  & p > a > code {
+    font-size: 16px;
   }
 
   ${props => (props.hasCode ? syntaxHighlighting : null)}
