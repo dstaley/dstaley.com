@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Dylan Staley",
     url: "https://dstaley.com",
+    siteUrl: "https://dstaley.com",
     description: "Dylan Staley, Web Developer and purveyor of cute puppy pics."
   },
   plugins: [
@@ -20,6 +21,9 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-emotion",
-    "gatsby-plugin-netlify"
+    "gatsby-plugin-netlify",
+    {
+      resolve: `gatsby-plugin-feed`
+    }
   ]
 };
