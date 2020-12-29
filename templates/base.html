@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {%- if page.title -%}
       <title>{{ page.title }} - {{ config.title }}</title>
     {%- else -%}
@@ -15,28 +17,33 @@
     {%- endif -%}
 
     {%- if page.extra.has_opengraph -%}
-      <meta property="og:site_name" content="{{ config.title }}" />
-      <meta property="og:title" content="{{ page.title | escape }}" />
-      <meta name="twitter:title" content="{{ page.title | escape }}" />
+      <meta property="og:site_name" content="{{ config.title }}">
+      <meta property="og:title" content="{{ page.title | escape }}">
+      <meta name="twitter:title" content="{{ page.title | escape }}">
       <meta property="og:type" content="article" />
-      <meta property="og:url" content="{{ page.permalink | safe }}" />
-      <meta name="twitter:url" content="{{ page.permalink | safe }}" />
+      <meta property="og:url" content="{{ page.permalink | safe }}">
+      <meta name="twitter:url" content="{{ page.permalink | safe }}">
       {%- if page.description -%}
-        <meta property="og:description" content="{{ page.description }}" />
-        <meta name="twitter:description" content="{{ page.description }}" />
+        <meta property="og:description" content="{{ page.description }}">
+        <meta name="twitter:description" content="{{ page.description }}">
       {%- else -%}
-        <meta property="og:description" content="{{ config.description }}" />
-        <meta name="twitter:description" content="{{ config.description }}" />
+        <meta property="og:description" content="{{ config.description }}">
+        <meta name="twitter:description" content="{{ config.description }}">
       {%- endif -%}
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@dstaley" />
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@dstaley">
     {%- endif -%}
 
-    <link rel="canonical" href="{{ current_url | safe }}" />
-    <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ get_url(path="rss.xml", trailing_slash=false) | safe }}" />
+    <link rel="canonical" href="{{ current_url | safe }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ get_url(path="rss.xml", trailing_slash=false) | safe }}">
 
-    <link rel="shortcut icon" href="/img/rocket.png" />
-    <link rel="stylesheet" href="/index.css" />
+    <link rel="shortcut icon" href="/img/rocket.png">
+
+    {% if current_url is starting_with("http://127.0.0.1:1111/") %}
+      <link rel="stylesheet" href="/index.css">
+    {% else %}
+      <style>{{ load_data(path="public/index.css") | trim | safe }}</style>
+    {% endif %}
   </head>
   <body>
     <div class="main-container">{% block main %}{% endblock %}</div>
