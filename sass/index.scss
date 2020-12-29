@@ -1,0 +1,194 @@
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: "Operator Mono", SFMono-Regular, Menlo, Monaco,
+  "Cascadia Code", Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base: $font-family-sans-serif;
+$primary-color: #444444;
+
+body {
+  font-family: $font-family-base;
+  color: $primary-color;
+  font-size: 18px;
+  line-height: 1.75rem;
+}
+
+a {
+  color: tomato;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: tomato;
+  }
+}
+
+h1,
+h2 {
+  color: black;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.25rem;
+}
+
+.main-container {
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 60px;
+  margin-bottom: 12rem;
+
+  @media (min-width: 1024px) {
+    width: 720px;
+  }
+}
+
+article {
+  header {
+    font-size: 18px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .gigabit-map {
+    margin: 0;
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 0;
+    }
+
+    figcaption {
+      text-align: right;
+      font-style: italic;
+      color: #808080;
+      font-size: 12px;
+    }
+
+    a {
+      color: lighten($color: $primary-color, $amount: 30);
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  p > code,
+  p > a > code {
+    font-size: 1rem;
+  }
+}
+
+.post-header {
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .date {
+    margin: 0;
+    margin-top: 45px;
+    font-size: 0.75rem;
+  }
+
+  h1,
+  h2 {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  .subtitle {
+    color: #808080;
+    margin: 0;
+  }
+}
+
+nav {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.home-header {
+  text-align: center;
+  @media (min-width: 1024px) {
+    text-align: left;
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    img {
+      width: 75px;
+      height: 75px;
+      border-radius: 75px;
+      margin-right: 25px;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15),
+        0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 -0.1px 3px 0 rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  .links {
+    font-size: 0.8rem;
+    margin-top: 0;
+    & a {
+      margin-right: 10px;
+    }
+  }
+
+  .bio {
+    margin-bottom: 4rem;
+  }
+}
+
+pre {
+  background-color: rgb(40, 44, 52);
+  margin-bottom: 2em;
+  overflow: auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 10px -5px,
+    rgba(0, 0, 0, 0.14) 0px 16px 24px 2px, rgba(0, 0, 0, 0.12) 0px 6px 30px 5px;
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 1rem;
+
+  code {
+    background: none;
+    white-space: pre;
+    padding: 0;
+  }
+}
+
+code {
+  font-family: $font-family-monospace;
+  white-space: pre-wrap;
+  background: #f3f3f3;
+  padding: 0.2rem 0.4rem;
+}

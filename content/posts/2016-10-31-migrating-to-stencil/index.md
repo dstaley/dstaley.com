@@ -1,12 +1,10 @@
----
-layout: post
-hasOpengraph: true
-hasCode: true
-title: Migrating to Stencil
-slug: migrating-to-stencil
-subtitle: About a year ago, I helped build a new website for Marucci Sports. Almost exactly a year later, we rebuilt the site from the ground up using Stencil, a new theme framework from Bigcommerce.
-date: "2016-10-31T00:00:00Z"
----
++++
+title = "Migrating to Stencil"
+path = "2016/10/31/migrating-to-stencil"
+description = "About a year ago, I helped build a new website for Marucci Sports. Almost exactly a year later, we rebuilt the site from the ground up using Stencil, a new theme framework from Bigcommerce."
+date = 2016-10-31
++++
+
 On June 4, 2015, I managed to convince my current employer [Marucci Sports](https://maruccisports.com) to take on the audacious task of redesigning our website. Exactly four weeks later, I interviewed the amazing designer who would eventually become our Lead Web Designer, Diana Perkins. Over the next 20 weeks Diana and our marketing team created a design that would go on to win our ecommerce platform's [first ever Design Awards](https://www.bigcommerce.com/press/releases/bigcommerce-announces-2016-design-award-winners/). We launched late November of that year, just five days before Black Friday.
 
 And this year, we raised the stakes. We rebuilt and redesigned our site in just six weeks.
@@ -55,11 +53,11 @@ After our static content pages were added, we focused on sprucing up dynamically
 In the process of rewriting the custom bat layout, we also took the opportunity to upgrade our bat preview to take advantage of Stencil's new event system. In our Blueprint theme, we were listening for clicks on the individual swatches that represented the colors available.
 
 ```js
-$('.productAttributeList').on('click', 'li.swatch', function(e) {
-  if (e.target.tagName === 'SPAN') {
-    var children =  e.currentTarget.children[0].childNodes
+$(".productAttributeList").on("click", "li.swatch", function (e) {
+  if (e.target.tagName === "SPAN") {
+    var children = e.currentTarget.children[0].childNodes;
     var piece = children[3].dataset.option;
-    var color = children[5].textContent.replace(/\s+/g, '_').toLowerCase();
+    var color = children[5].textContent.replace(/\s+/g, "_").toLowerCase();
     var state = {};
     state[piece] = color;
     el.setState(state);
@@ -72,7 +70,7 @@ This…worked. However if you look closely you can see we're relying on a very s
 In Stencil, this is a bit more elegant:
 
 ```js
-utils.hooks.on('product-option-change', (event, changedOption) => {
+utils.hooks.on("product-option-change", (event, changedOption) => {
   // this.options is a mapping of unfriendly Bigcommerce IDs to friendly values.
   if (this.options.hasOwnProperty(changedOption.name)) {
     const option = this.options[changedOption.name];
@@ -98,7 +96,7 @@ Speaking of things you get out of the box, one of the big things we tried to foc
 
 There's a ton to love about Stencil, from both the store owner perspective and that of a theme developer. I think I'm a bit lucky in that I can speak from both points of view.
 
-As a developer, the single biggest benefit that Stencil brings is a local development environment. As far as I know, Bigcommerce is *the only SaaS eCommerce platform* that is able to provide an environment like this to their developers, and it's a Really Big Deal. (Although all rendering happens locally, Stencil still requires an internet connection to retrieve live-store information. Thankfully it wouldn't be too terribly difficult to create a mock server that returns static data.)
+As a developer, the single biggest benefit that Stencil brings is a local development environment. As far as I know, Bigcommerce is _the only SaaS eCommerce platform_ that is able to provide an environment like this to their developers, and it's a Really Big Deal. (Although all rendering happens locally, Stencil still requires an internet connection to retrieve live-store information. Thankfully it wouldn't be too terribly difficult to create a mock server that returns static data.)
 
 One of the other big things that I really love about Stencil is that it feels like a tool designed for how the web is built in 2016. Stylesheets are written in SCSS; JavaScript is transpiled with Babel (and you can even add your own plugins and transforms!) and bundled with webpack (although you're free to use whatever you'd like), and templates are written in Handlebars. With our Blueprint theme, we basically designed our own build system based on Gulp, SCSS, Babel, and Nunjucks, so we felt right at home with Stencil.
 
