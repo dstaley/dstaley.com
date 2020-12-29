@@ -271,5 +271,8 @@ code {
   white-space: pre-wrap;
   background: var(--inline-code-background);
   color: var(--inline-code-text-color);
-  padding: 0.2rem 0.4rem;
+
+  @media (min-width: 360px) {
+    padding: 0.2rem 0.4rem;
+  }
 }
