@@ -1,12 +1,9 @@
----
-layout: post
-hasOpengraph: true
-hasCode: true
-title: Stencil and Webpack 2
-slug: stencil-and-webpack-2
-subtitle: With the recent release of Webpack 2, I wanted to see how easy it would be to migrate Stencil to it, and if I could take advantage of automatic code splitting.
-date: "2017-02-12T00:00:00Z"
----
++++
+title = "Stencil and Webpack 2"
+path = "2017/02/12/stencil-and-webpack-2"
+description = "With the recent release of Webpack 2, I wanted to see how easy it would be to migrate Stencil to it, and if I could take advantage of automatic code splitting."
+date = 2017-02-12
++++
 
 Over the past few weeks I've read a lot about code splitting, or the idea of delivering just the JavaScript needed to run the current page/route. Code splitting is an attempt to balance the benefits and drawbacks to large client-side applications. Instead of downloading and parsing all of the JavaScript for your entire application, you can deliver just a portion. As users navigate to new routes within your application, the code necessary for them is downloaded on the fly. Initial page load times are quicker thanks to less JavaScript being downloaded, but subsequent page loads of new routes have to download a small amount of JavaScript. It's all about finding a balance that's right for your application and users.
 
@@ -40,7 +37,7 @@ TypeError: Illegal module name "/Users/dstaley/Desktop/stencil-error/node_module
     at NormalModule.doBuild (/Users/dstaley/Desktop/stencil-error/node_modules/webpack/lib/NormalModule.js:129:2)
 ```
 
-The thing that made this error really strange is that manually running `webpack` wouldn't trigger it; only when running `stencil start` would I encounter the error. Knowing this, I set out to figure out what Stencil was doing that would interfere with Webpack's ability to load `babel-loader`. Long story short, Stencil is using [JSPM](), which polyfills `System.import`. Webpack's `loader-runner` defaults to using `System.import` if it's defined, otherwise it will load things itself. The issue arose from the fact that JSPM's polyfill wasn't compatible with Webpack. Since transitioning Stencil away from JSPM wasn't what I wanted to spend my Sunday on, I decided to use a workaround that I'm honestly not very proud of: I straight up removed the `System` object from the global scope. The good news though is that it worked, and it didn't seem to break anything obvious!
+The thing that made this error really strange is that manually running `webpack` wouldn't trigger it; only when running `stencil start` would I encounter the error. Knowing this, I set out to figure out what Stencil was doing that would interfere with Webpack's ability to load `babel-loader`. Long story short, Stencil is using JSPM, which polyfills `System.import`. Webpack's `loader-runner` defaults to using `System.import` if it's defined, otherwise it will load things itself. The issue arose from the fact that JSPM's polyfill wasn't compatible with Webpack. Since transitioning Stencil away from JSPM wasn't what I wanted to spend my Sunday on, I decided to use a workaround that I'm honestly not very proud of: I straight up removed the `System` object from the global scope. The good news though is that it worked, and it didn't seem to break anything obvious!
 
 After disabling the polyfill, `stencil start` was able to properly call Webpack and build the bundle! So now it was time to move on to the difficult part.
 
@@ -66,7 +63,7 @@ Since `System.import` uses a network request to load the module, it returns a Pr
 // Comment
 const pageTypePromise = pages.get(templateFile);
 if (pageTypePromise !== false) {
-  pageTypePromise().then(PageTypeFn => {
+  pageTypePromise().then((PageTypeFn) => {
     const pageType = new PageTypeFn.default(context);
     pageType.context = context;
     return loader(pageType, pages);
@@ -78,7 +75,7 @@ After setting up all the routes and attempting to run Stencil, I was incredibly 
 
 ```js
 const scriptURL = document.currentScript.src;
-__webpack_public_path__ = scriptURL.slice(0, scriptURL.lastIndexOf('/') + 1);
+__webpack_public_path__ = scriptURL.slice(0, scriptURL.lastIndexOf("/") + 1);
 ```
 
 After figuring that out, I was able to successfully load modules dynamically! To confirm that code splitting was working, I used the excellent [Webpack Visualizer](https://chrisbateman.github.io/webpack-visualizer/) by [Chris Bateman](https://twitter.com/batemanchris). When I loaded my `main` bundle, I was a bit taken aback by the fact that Lodash represented a whopping 32% of the bundle size!

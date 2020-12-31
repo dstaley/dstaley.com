@@ -1,11 +1,9 @@
----
-layout: post
-hasOpengraph: true
-title: Gigabit in Baton Rouge
-slug: gigabit-in-baton-rouge
-subtitle: My ISP wouldn't give me a list of where they were providing gigabit internet. So I made my own.
-date: "2017-04-30T00:00:00Z"
----
++++
+title = "Gigabit in Baton Rouge"
+path = "2017/04/30/gigabit-in-baton-rouge"
+description = "My ISP wouldn't give me a list of where they were providing gigabit internet. So I made my own."
+date = 2017-04-30
++++
 
 A few days ago, I asked my ISP what I thought was a simple question:
 

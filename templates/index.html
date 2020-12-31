@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block main %}
+<header class="home-header">
+  <h1>
+    <img
+      alt="Dylan Staley"
+      src="/img/avi.jpg"
+      srcset="
+        /img/avi@1x.jpg,
+        /img/avi@2x.jpg 2x,
+        /img/avi@3x.jpg 3x,
+        /img/avi@4x.jpg 4x
+      "
+    />Dylan Staley
+  </h1>
+  <p class="links">
+    <a href="https://twitter.com/dstaley">twitter</a>
+    <a href="https://github.com/dstaley">github</a>
+  </p>
+</header>
+{{ section.content | safe }} {% set posts_section = get_section(path =
+"posts/_index.md") %} {% set posts = posts_section.pages %} {%- for post in
+posts | reverse -%}
+<div class="post-header">
+  <p class="date">{{ post.date | date(format="%B %-d, %Y") }}</p>
+  <a href="{{ post.permalink }}">
+    <h2>{{ post.title }}</h2>
+  </a>
+  {% if post.description %}
+  <p class="subtitle">{{ post.description }}</p>
+  {% endif %}
+</div>
+{%- endfor -%} {% endblock %}
