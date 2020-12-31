@@ -16,22 +16,32 @@
       <meta name="description" content="{{ config.description }}">
     {%- endif -%}
 
-    {%- if page.extra.has_opengraph -%}
+    {%- if page.extra.has_opengraph or section.extra.has_opengraph -%}
       <meta property="og:site_name" content="{{ config.title }}">
-      <meta property="og:title" content="{{ page.title | escape }}">
-      <meta name="twitter:title" content="{{ page.title | escape }}">
-      <meta property="og:type" content="article" />
-      <meta property="og:url" content="{{ page.permalink | safe }}">
-      <meta name="twitter:url" content="{{ page.permalink | safe }}">
-      {%- if page.description -%}
-        <meta property="og:description" content="{{ page.description }}">
-        <meta name="twitter:description" content="{{ page.description }}">
+      {%- if page.title -%}
+        <meta property="og:title" name="twitter:title" content="{{ page.title | escape }}">
       {%- else -%}
-        <meta property="og:description" content="{{ config.description }}">
-        <meta name="twitter:description" content="{{ config.description }}">
+        <meta property="og:title" name="twitter:title" content="{{ config.title | escape }}">
+      {%- endif -%}
+      {%- if current_path == "/" -%}
+        <meta property="og:type" content="website">
+        <meta property="og:image" name="twitter:image" content="{{ get_url(path="/img/avi@4x.jpg") | safe}}">
+      {%- else -%}
+        <meta property="og:type" content="article">
+      {%- endif -%}
+      {%- if page.permalink -%}
+        <meta property="og:url" name="twitter:url" content="{{ page.permalink | safe }}">
+      {%- elif section.permalink -%}
+        <meta property="og:url" name="twitter:url" content="{{ section.permalink | safe }}">
+      {%- endif -%}
+      {%- if page.description -%}
+        <meta property="og:description" name="twitter:description" content="{{ page.description }}">
+      {%- else -%}
+        <meta property="og:description" name="twitter:description" content="{{ config.description }}">
       {%- endif -%}
       <meta name="twitter:card" content="summary">
       <meta name="twitter:site" content="@dstaley">
+      <meta name="twitter:creator" content="@dstaley">
     {%- endif -%}
 
     <link rel="canonical" href="{{ current_url | safe }}">
@@ -39,11 +49,11 @@
 
     <link rel="shortcut icon" href="/img/rocket.png">
 
-    {% if current_url is starting_with("http://127.0.0.1:1111/") %}
+    {%- if current_url is starting_with("http://127.0.0.1:1111/") -%}
       <link rel="stylesheet" href="/index.css">
-    {% else %}
+    {%- else -%}
       <style>{{ load_data(path="public/index.css") | trim | safe }}</style>
-    {% endif %}
+    {%- endif -%}
   </head>
   <body>
     <div class="main-container">{% block main %}{% endblock %}</div>
