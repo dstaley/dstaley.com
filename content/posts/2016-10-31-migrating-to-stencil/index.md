@@ -2,7 +2,7 @@
 title: "Migrating to Stencil"
 path: "2016/10/31/migrating-to-stencil"
 description: "About a year ago, I helped build a new website for Marucci Sports. Almost exactly a year later, we rebuilt the site from the ground up using Stencil, a new theme framework from Bigcommerce."
-date: 2016-10-31
+date: 2016-10-31T12:00:00-08:00
 
 extra:
   has_opengraph: true
