@@ -1,12 +1,12 @@
-+++
-title = "Christmas with Dart"
-path = "2019/01/08/christmas-with-dart"
-description = "The exciting tale of how I started to build a Flutter app but ended up with three Dart libraries instead"
-date = 2019-01-08
+---
+title: "Christmas with Dart"
+path: "2019/01/08/christmas-with-dart"
+description: "The exciting tale of how I started to build a Flutter app but ended up with three Dart libraries instead"
+date: 2019-01-08
 
-[extra]
-has_opengraph = true
-+++
+extra:
+  has_opengraph: true
+---
 
 Over the Christmas holiday, I sat down to work on a project I've been attempting to get going for several months now. I'm a light [Pinboard](https://pinboard.in) user, and I'd love a minimal Pinboard client for Android that makes it easy to bookmark sites I find for safe keeping. Recently, Google's [Flutter](https://flutter.io/) released their first 1.0 release, so I decided to take a look in lieu of reaching for my typical choice of React Native.
 

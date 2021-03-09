@@ -1,12 +1,12 @@
-+++
-title = "Migrating to Stencil"
-path = "2016/10/31/migrating-to-stencil"
-description = "About a year ago, I helped build a new website for Marucci Sports. Almost exactly a year later, we rebuilt the site from the ground up using Stencil, a new theme framework from Bigcommerce."
-date = 2016-10-31
+---
+title: "Migrating to Stencil"
+path: "2016/10/31/migrating-to-stencil"
+description: "About a year ago, I helped build a new website for Marucci Sports. Almost exactly a year later, we rebuilt the site from the ground up using Stencil, a new theme framework from Bigcommerce."
+date: 2016-10-31
 
-[extra]
-has_opengraph = true
-+++
+extra:
+  has_opengraph: true
+---
 
 On June 4, 2015, I managed to convince my current employer [Marucci Sports](https://maruccisports.com) to take on the audacious task of redesigning our website. Exactly four weeks later, I interviewed the amazing designer who would eventually become our Lead Web Designer, Diana Perkins. Over the next 20 weeks Diana and our marketing team created a design that would go on to win our ecommerce platform's [first ever Design Awards](https://www.bigcommerce.com/press/releases/bigcommerce-announces-2016-design-award-winners/). We launched late November of that year, just five days before Black Friday.
 

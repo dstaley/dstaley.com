@@ -1,12 +1,12 @@
-+++
-title = "Stencil and Webpack 2"
-path = "2017/02/12/stencil-and-webpack-2"
-description = "With the recent release of Webpack 2, I wanted to see how easy it would be to migrate Stencil to it, and if I could take advantage of automatic code splitting."
-date = 2017-02-12
+---
+title: "Stencil and Webpack 2"
+path: "2017/02/12/stencil-and-webpack-2"
+description: "With the recent release of Webpack 2, I wanted to see how easy it would be to migrate Stencil to it, and if I could take advantage of automatic code splitting."
+date: 2017-02-12
 
-[extra]
-has_opengraph = true
-+++
+extra:
+  has_opengraph: true
+---
 
 Over the past few weeks I've read a lot about code splitting, or the idea of delivering just the JavaScript needed to run the current page/route. Code splitting is an attempt to balance the benefits and drawbacks to large client-side applications. Instead of downloading and parsing all of the JavaScript for your entire application, you can deliver just a portion. As users navigate to new routes within your application, the code necessary for them is downloaded on the fly. Initial page load times are quicker thanks to less JavaScript being downloaded, but subsequent page loads of new routes have to download a small amount of JavaScript. It's all about finding a balance that's right for your application and users.
 
