@@ -7,17 +7,17 @@ description = "Dylan Staley, Web Developer and purveyor of cute puppy pics."
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-[markdown]
-highlight_code = true
-highlight_theme = "dracula"
-
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
 generate_feed = true
 feed_filename = "rss.xml"
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+[markdown]
+highlight_code = true
+highlight_theme = "dracula"
 
 [extra]
 # Put all your custom variables here
