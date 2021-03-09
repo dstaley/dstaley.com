@@ -23,7 +23,7 @@
 
   {%- set posts_section = get_section(path ="posts/_index.md") -%}
   {%- set posts = posts_section.pages -%}
-  {%- for post in posts | reverse -%}
+  {%- for post in posts -%}
     <div class="post-header">
       <p class="date">{{ post.date | date(format="%B %-d, %Y") }}</p>
       <a href="{{ post.permalink | safe }}">
