@@ -1,12 +1,7 @@
+@import "./normalize";
+@import "./tailwind/normalize";
+@import "./tailwind/typography";
 @import "./rfs";
-
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-monospace: "Operator Mono", SFMono-Regular, Menlo, Monaco,
-  "Cascadia Code", Consolas, "Liberation Mono", "Courier New", monospace;
-$font-family-base: $font-family-sans-serif;
-$primary-color: #444444;
 
 @mixin light-theme {
   --background: white;
@@ -48,7 +43,6 @@ html {
 }
 
 body {
-  font-family: $font-family-base;
   color: var(--body-text-color);
   background-color: var(--background);
   line-height: 1.25;
@@ -56,6 +50,23 @@ body {
 
   @media (min-width: 360px) {
     line-height: 1.75;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80ch;
+  margin-bottom: 12rem;
+  padding: 0 4px;
+  padding-top: 8px;
+
+  @media (min-width: 360px) {
+    padding: 0 20px;
+    padding-top: 60px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 80ch;
   }
 }
 
@@ -73,11 +84,6 @@ a {
   }
 }
 
-p {
-  margin: 0;
-  @include margin-bottom(2.5rem);
-}
-
 %heading {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -85,77 +91,29 @@ p {
   color: var(--heading-text-color);
 }
 
-h1 {
-  @extend %heading;
-  @include font-size(2.5rem);
-}
-
-h2 {
-  @extend %heading;
-  @include font-size(2rem);
-}
-
-h3 {
-  @extend %heading;
-  @include font-size(1.75rem);
-}
-
-h4 {
-  @extend %heading;
-  @include font-size(1.5rem);
-}
-
-h5 {
-  @extend %heading;
-  @include font-size(1.25rem);
-}
-
-h6 {
-  @extend %heading;
-  @include font-size(1rem);
-}
-
-.main-container {
-  margin: 0 auto;
-  margin-bottom: 12rem;
-  padding: 0 4px;
-  padding-top: 8px;
-
-  @media (min-width: 360px) {
-    padding: 0 20px;
-    padding-top: 60px;
-  }
-
-  @media (min-width: 1024px) {
-    width: 900px;
+blockquote {
+  & > cite {
+    @include font-size(0.75rem);
+    @include margin-top(0.5rem);
+    display: block;
+    text-align: right;
   }
 }
 
-article {
-  img {
-    max-width: 100%;
+.gigabit-map {
+  margin: 0;
+
+  iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
   }
 
-  .gigabit-map {
-    margin: 0;
-
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: 0;
-    }
-
-    figcaption {
-      text-align: right;
-      font-style: italic;
-      color: var(--subhead-text-color);
-      font-size: 12px;
-    }
-  }
-
-  p > code,
-  p > a > code {
-    font-size: 1rem;
+  figcaption {
+    text-align: right;
+    font-style: italic;
+    color: var(--subhead-text-color);
+    font-size: 12px;
   }
 }
 
@@ -183,6 +141,17 @@ article {
     margin-bottom: 7px;
   }
 
+  h1 {
+    @extend %heading;
+    @include font-size(2.5rem);
+    font-weight: 700;
+  }
+
+  h2 {
+    @extend %heading;
+    @include font-size(2rem);
+  }
+
   .subtitle {
     color: var(--subhead-text-color);
     margin: 0;
@@ -207,12 +176,15 @@ nav {
 
 .home-header {
   text-align: left;
+
   @media (min-width: 1024px) {
     text-align: left;
   }
 
   h1 {
     @include font-size(3rem);
+    color: var(--heading-text-color);
+    font-weight: 700;
     margin: 0;
     margin-bottom: 0.5rem;
     display: flex;
@@ -246,6 +218,8 @@ nav {
   .links {
     font-size: 0.8rem;
     margin-top: 0;
+    @include margin-bottom(2.5rem);
+
     & a {
       margin-right: 10px;
     }
@@ -257,27 +231,14 @@ nav {
 }
 
 pre {
-  background-color: rgb(40, 44, 52);
-  margin-bottom: 2em;
-  overflow: auto;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 10px -5px,
     rgba(0, 0, 0, 0.14) 0px 16px 24px 2px, rgba(0, 0, 0, 0.12) 0px 6px 30px 5px;
   border-radius: 4px;
-  padding: 1rem;
-  font-size: 1rem;
-
-  code {
-    background: none;
-    white-space: pre;
-    padding: 0;
-  }
 }
 
 code {
-  font-family: $font-family-monospace;
   white-space: pre-wrap;
   background: var(--inline-code-background);
-  color: var(--inline-code-text-color);
 
   @media (min-width: 360px) {
     padding: 0.2rem 0.4rem;
