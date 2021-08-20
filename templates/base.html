@@ -25,7 +25,7 @@
       {%- endif -%}
       {%- if current_path == "/" -%}
         <meta property="og:type" content="website">
-        <meta property="og:image" name="twitter:image" content="{{ get_url(path="/img/avi@4x.jpg") | safe}}">
+        <meta property="og:image" name="twitter:image" content="{{ resize_image(path='img/avi.jpg', width=300, height=300) | get(key='url') | safe }}">
       {%- else -%}
         <meta property="og:type" content="article">
       {%- endif -%}

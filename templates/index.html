@@ -4,14 +4,14 @@
   <header class="home-header">
     <h1>
       <img
-        alt="Dylan Staley"
-        src="/img/avi.jpg"
+        alt="A photo of Dylan Staley"
+        src="{{ resize_image(path='img/avi.jpg', width=75, height=75) | get(key='url') | safe }}"
         srcset="
-          /img/avi@1x.jpg,
-          /img/avi@2x.jpg 2x,
-          /img/avi@3x.jpg 3x,
-          /img/avi@4x.jpg 4x
+          {{ resize_image(path='img/avi.jpg', width=75, height=75) | get(key='url') | safe }},
+          {{ resize_image(path='img/avi.jpg', width=300, height=300) | get(key='url') | safe }} 2x
         "
+        width="75"
+        height="75"
       />Dylan Staley
     </h1>
     <p class="links">

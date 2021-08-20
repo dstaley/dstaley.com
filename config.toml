@@ -4,6 +4,8 @@ base_url = "https://dstaley.com"
 title = "Dylan Staley"
 description = "Dylan Staley, Web Developer and purveyor of cute puppy pics."
 
+default_language = "en"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -17,7 +19,7 @@ feed_filename = "rss.xml"
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 [markdown]
 highlight_code = true
-highlight_theme = "dracula"
+highlight_theme = "one-dark"
 
 [extra]
 # Put all your custom variables here
