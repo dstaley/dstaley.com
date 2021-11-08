@@ -4,7 +4,28 @@ command = "zola build"
 
 [build.environment]
 # Set the version name that you want to use and Netlify will automatically use it.
-ZOLA_VERSION = "0.14.0"
+ZOLA_VERSION = "0.14.1"
 
 [context.deploy-preview]
 command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[[headers]]
+  for = "/processed_images/*"
+  [headers.values]
+    cache-control = "public, max-age=31536000"
+
+[[redirects]]
+  from = "/2016/10/31/migrating-to-stencil"
+  to = "/posts/migrating-to-stencil"
+
+[[redirects]]
+  from = "/2017/02/12/stencil-and-webpack-2"
+  to = "/posts/stencil-and-webpack-2"
+
+[[redirects]]
+  from = "/2017/04/30/gigabit-in-baton-rouge"
+  to = "/posts/gigabit-in-baton-rouge"
+
+[[redirects]]
+  from = "/2019/01/08/christmas-with-dart"
+  to = "/posts/christmas-with-dart"

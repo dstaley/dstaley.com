@@ -1,6 +1,5 @@
 ---
 title: "Christmas with Dart"
-path: "2019/01/08/christmas-with-dart"
 description: "The exciting tale of how I started to build a Flutter app but ended up with three Dart libraries instead"
 date: 2019-01-08T12:00:00-08:00
 

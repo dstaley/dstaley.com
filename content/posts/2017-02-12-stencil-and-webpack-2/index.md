@@ -1,6 +1,5 @@
 ---
 title: "Stencil and Webpack 2"
-path: "2017/02/12/stencil-and-webpack-2"
 description: "With the recent release of Webpack 2, I wanted to see how easy it would be to migrate Stencil to it, and if I could take advantage of automatic code splitting."
 date: 2017-02-12T12:00:00-08:00
 

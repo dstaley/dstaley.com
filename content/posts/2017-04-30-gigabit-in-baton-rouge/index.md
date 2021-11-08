@@ -1,6 +1,5 @@
 ---
 title: "Gigabit in Baton Rouge"
-path: "2017/04/30/gigabit-in-baton-rouge"
 description: "My ISP wouldn't give me a list of where they were providing gigabit internet. So I made my own."
 date: 2017-04-30T12:00:00-08:00
 
