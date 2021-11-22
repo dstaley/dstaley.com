@@ -5,6 +5,7 @@ date: 2021-11-22T12:00:00-08:00
 
 extra:
   has_opengraph: true
+  opengraph_image: img/tailscale-on-kobo.jpg
 ---
 
 Last month, Rakuten finally released a reasonably-sized Kobo with USB C, the Kobo Sage. One of the most fascinating things about the Kobo eReaders (compared to the Kindle eReaders) is that they run a user-modifiable version of Linux, meaning you're free to do all sorts of weird and wild things with them.
