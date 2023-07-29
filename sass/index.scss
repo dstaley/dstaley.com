@@ -8,7 +8,7 @@
   --body-text-color: #444444;
   --heading-text-color: black;
   --subhead-text-color: #808080;
-  --link-text-color: tomato;
+  --link-text-color: #ff5f42; // tomato, but more contrasty
   --inline-code-background: #f3f3f3;
   --inline-code-text-color: #444444;
 }
@@ -230,6 +230,35 @@ nav {
   }
 }
 
+.links-header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15), 0 4px 4px 0 rgba(0, 0, 0, 0.1),
+      0 -0.1px 3px 0 rgba(0, 0, 0, 0.08);
+
+    @media (min-width: 360px) {
+      width: 96px;
+      height: 96px;
+      border-radius: 96px;
+    }
+  }
+
+  h1 {
+    @include font-size(3rem);
+    color: var(--heading-text-color);
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
 pre,
 .prose img,
 .prose video {
@@ -244,5 +273,17 @@ code {
 
   @media (min-width: 360px) {
     padding: 0.2rem 0.4rem;
+  }
+}
+
+.links-list {
+  text-align: center;
+
+  & a {
+    display: block;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border: 1px solid tomato;
+    border-radius: 8px;
   }
 }

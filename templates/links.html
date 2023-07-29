@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <nav>
+    <a href="/">&lt; Home</a>
+  </nav>
+  <header class="links-header">
+    <img
+        alt="A photo of Dylan Staley"
+        src="{{ resize_image(path='img/avi.jpg', width=96, height=96) | get(key='url') | safe }}"
+        srcset="
+          {{ resize_image(path='img/avi.jpg', width=96, height=96) | get(key='url') | safe }},
+          {{ resize_image(path='img/avi.jpg', width=300, height=300) | get(key='url') | safe }} 2x
+        "
+        width="75"
+        height="75"
+    />
+    <h1>Dylan Staley</h1>
+  </header>
+  <main class="links-list">
+    {{ page.content | safe -}}
+  </main>
+{% endblock %}
