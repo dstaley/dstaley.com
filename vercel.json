@@ -1,4 +1,4 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "public"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "zola build --base-url $([ \"$VERCEL_ENV\" = \"production\" ] && echo \"https://dstaley.com\" || echo \"https://$VERCEL_URL\")"
 }
