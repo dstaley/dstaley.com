@@ -1,0 +1,4 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "zola build --base-url $([ \"$VERCEL_ENV\" = \"production\" ] && \"https://dstaley.com\" || \"https://$VERCEL_URL\")"
+}
