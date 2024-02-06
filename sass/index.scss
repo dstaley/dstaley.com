@@ -7,8 +7,8 @@
   --background: white;
   --body-text-color: #444444;
   --heading-text-color: black;
-  --subhead-text-color: #808080;
-  --link-text-color: #ff5f42; // tomato, but more contrasty
+  --subhead-text-color: #767676;
+  --link-text-color: #e62200; // tomato, but more contrasty
   --inline-code-background: #f3f3f3;
   --inline-code-text-color: #444444;
 }
@@ -145,6 +145,7 @@ blockquote {
     @extend %heading;
     @include font-size(2.5rem);
     font-weight: 700;
+    text-wrap: balance;
   }
 
   h2 {
@@ -154,6 +155,7 @@ blockquote {
 
   .subtitle {
     color: var(--subhead-text-color);
+    text-wrap: pretty;
     margin: 0;
   }
 }
@@ -286,4 +288,8 @@ code {
     border: 1px solid tomato;
     border-radius: 8px;
   }
+}
+
+.prose {
+  text-wrap: pretty;
 }
