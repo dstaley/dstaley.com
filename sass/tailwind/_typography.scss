@@ -5,7 +5,6 @@
 
 .prose [class~="lead"] {
   color: #4b5563;
-  font-size: 1.25em;
   line-height: 1.6;
   margin-top: 1.2em;
   margin-bottom: 1.2em;
@@ -117,7 +116,6 @@
 .prose h1 {
   color: var(--heading-text-color);
   font-weight: 800;
-  font-size: 2.25em;
   margin-top: 0;
   margin-bottom: 0.8888889em;
   line-height: 1.1111111;
@@ -126,7 +124,6 @@
 .prose h2 {
   color: var(--heading-text-color);
   font-weight: 700;
-  font-size: 2em;
   margin-top: 2em;
   margin-bottom: 1em;
   line-height: 1.3333333;
@@ -135,7 +132,6 @@
 .prose h3 {
   color: var(--heading-text-color);
   font-weight: 700;
-  font-size: 1.5em;
   margin-top: 1.6em;
   margin-bottom: 0.6em;
   line-height: 1.6;
@@ -151,7 +147,6 @@
 
 .prose figure figcaption {
   color: var(--subhead-text-color);
-  font-size: 0.875em;
   line-height: 1.4285714;
   margin-top: 0.8571429em;
 }
@@ -159,7 +154,6 @@
 .prose code {
   color: var(--inline-code-text-color);
   font-weight: 600;
-  font-size: 0.875em;
 }
 
 .prose code::before {
@@ -178,7 +172,6 @@
   color: #e5e7eb;
   background-color: #1f2937;
   overflow-x: auto;
-  font-size: 0.875em;
   line-height: 1.7142857;
   margin-top: 1.7142857em;
   margin-bottom: 1.7142857em;
@@ -215,7 +208,6 @@
   text-align: left;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-size: 0.875em;
   line-height: 1.7142857;
 }
 
@@ -251,7 +243,6 @@
 }
 
 .prose {
-  font-size: 1rem;
   line-height: 1.75;
 }
 
@@ -278,14 +269,6 @@
 .prose figure > * {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.prose h2 code {
-  font-size: 0.875em;
-}
-
-.prose h3 code {
-  font-size: 0.9em;
 }
 
 .prose ol {
