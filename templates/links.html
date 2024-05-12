@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 
 {% block main %}
-  <nav>
-    <a href="/">&lt; Home</a>
-  </nav>
-  <header class="links-header">
+  {% include "back_button.html" %}
+  <header class="flex flex-col items-center text-center mb-4">
     <img
+        class="shadow rounded-full w-[50px]"
         alt="A photo of Dylan Staley"
         src="{{ resize_image(path='img/avi.jpg', width=96, height=96) | get(key='url') | safe }}"
         srcset="
@@ -15,9 +14,9 @@
         width="75"
         height="75"
     />
-    <h1>Dylan Staley</h1>
+    <h1 class="font-bold dark:text-white">Dylan Staley</h1>
   </header>
-  <main class="links-list">
+  <main class="text-center links">
     {{ page.content | safe -}}
   </main>
 {% endblock %}

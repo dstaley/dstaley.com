@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
 {%- block main -%}
-  <header class="home-header">
-    <h1>
+  <header class="mb-4">
+    <h1 class="flex items-center mb-2 font-bold dark:text-white">
       <img
+        class="shadow-md rounded-full mr-4 w-[35px] sm:w-[50px]"
         alt="A photo of Dylan Staley"
         src="{{ resize_image(path='img/avi.jpg', width=75, height=75) | get(key='url') | safe }}"
         srcset="
@@ -14,26 +15,29 @@
         height="75"
       />Dylan Staley
     </h1>
-    <p class="links">
+    <p class="flex gap-x-4 font-semibold text-tomato-600 dark:text-tomato-300">
       <a rel="me" href="https://mastodon.social/@dstaley">mastodon</a>
       <a href="https://github.com/dstaley">github</a>
       <a href="https://www.linkedin.com/in/dstaley/">linkedin</a>
       <a href="/links">more...</a>
     </p>
   </header>
-  {{ section.content | safe -}}
 
-  {%- set posts_section = get_section(path ="posts/_index.md") -%}
-  {%- set posts = posts_section.pages -%}
-  {%- for post in posts -%}
-    <div class="post-header">
-      <p class="date">{{ post.date | date(format="%B %-d, %Y") }}</p>
-      <a href="{{ post.path | safe }}">
-        <h2>{{ post.title }}</h2>
-      </a>
-      {%- if post.description -%}
-        <p class="subtitle">{{ post.description }}</p>
-      {%- endif -%}
-    </div>
-  {%- endfor -%}
+  <div class="prose dark:prose-invert prose-a:text-tomato-600 dark:prose-a:text-tomato-300">{{ section.content | safe -}}</div>
+
+  <div class="flex flex-col gap-y-8 mt-10">
+    {%- set posts_section = get_section(path ="posts/_index.md") -%}
+    {%- set posts = posts_section.pages -%}
+    {%- for post in posts -%}
+      <div class="flex flex-col gap-y-1" style="view-transition-name: post-{{ post.slug | safe }}">
+        <p class="font-thin">{{ post.date | date(format="%B %-d, %Y") }}</p>
+        <a class="text-gray-900 dark:text-gray-100 font-semibold leading-snug" href="{{ post.path | safe }}">
+          <h2>{{ post.title }}</h2>
+        </a>
+        {%- if post.description -%}
+          <p>{{ post.description }}</p>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
 {% endblock %}
