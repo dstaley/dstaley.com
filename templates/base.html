@@ -60,7 +60,7 @@
     {%- if current_url is starting_with("http://127.0.0.1:1111/") -%}
       <link rel="stylesheet" href="/index.css">
     {%- else -%}
-      <style>{{ load_data(path="public/index.css") | trim | safe }}</style>
+      <style>{{ load_data(path="static/index.css") | trim | safe }}</style>
     {%- endif -%}
   </head>
   <body class="text-gray-700 dark:bg-shark-950 dark:text-gray-300">
