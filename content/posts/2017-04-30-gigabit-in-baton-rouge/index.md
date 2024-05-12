@@ -28,9 +28,9 @@ In November of last year, [AT&T announced](http://www.prnewswire.com/news-releas
 
 However, what I didn't find were addresses in North Baton Rouge, despite the fact that the area was explicitly called out as having fiber in AT&T's November press release. In fact, if you map out the areas where AT&T is offering gigabit and compare it to median household income, a (sadly unsurprising) trend emerges.
 
-<figure class="gigabit-map">
-  <iframe src="https://baton-rouge-gigabit-map.glitch.me/"></iframe>
-  <figcaption>Income data from the U.S. Census Bureau’s 2015 American Community Survey. <a target="_blank" href="https://baton-rouge-gigabit-map.glitch.me/">View map in new tab</a></figcaption>
+<figure>
+  <iframe src="https://baton-rouge-gigabit-map.glitch.me/" class="w-full h-[500px]"></iframe>
+  <figcaption class="italic text-sm">Income data from the U.S. Census Bureau’s 2015 American Community Survey. <a target="_blank" href="https://baton-rouge-gigabit-map.glitch.me/">View map in new tab</a></figcaption>
 </figure>
 
 A few weeks ago, Ars Technica published an article with the headline ["AT&T allegedly "discriminated" against poor people in broadband upgrades"](https://arstechnica.com/information-technology/2017/03/att-allegedly-discriminated-against-poor-people-in-broadband-upgrades/), which highlighted a report that demonstrated there was virtually no overlap in areas that had fiber-to-the-home and areas that had a poverty rate of 35% or more. It's unsurprising that lower-income areas in Baton Rouge are being left out as well.

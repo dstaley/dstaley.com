@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="md:text-xl">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -50,6 +50,8 @@
       <meta name="twitter:creator" content="@dstaley">
     {%- endif -%}
 
+    <meta name="view-transition" content="same-origin" />
+
     <link rel="canonical" href="{{ current_url | safe }}">
     <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ get_url(path="rss.xml", trailing_slash=false) | safe }}">
 
@@ -61,7 +63,7 @@
       <style>{{ load_data(path="public/index.css") | trim | safe }}</style>
     {%- endif -%}
   </head>
-  <body>
-    <div class="container">{% block main %}{% endblock %}</div>
+  <body class="text-gray-700 dark:bg-shark-950 dark:text-gray-300">
+    <div class="max-w-[60ch] mx-auto p-4 mb-32">{% block main %}{% endblock %}</div>
   </body>
 </html>

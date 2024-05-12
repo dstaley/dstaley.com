@@ -6,9 +6,6 @@ description = "Dylan Staley, Web Developer and purveyor of cute puppy pics."
 
 default_language = "en"
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
-
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
