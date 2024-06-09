@@ -58,7 +58,11 @@
         <meta property="og:description" content="{{ config.description }}">
         <meta name="twitter:description" content="{{ config.description }}">
       {%- endif -%}
-      <meta name="twitter:card" content="summary">
+      {%- if current_path == "/" -%}
+        <meta name="twitter:card" content="summary">
+      {%- else -%}
+        <meta name="twitter:card" content="summary_large_image">
+      {%- endif -%}
       <meta name="twitter:site" content="@dstaley">
       <meta name="twitter:creator" content="@dstaley">
     {%- endif -%}
