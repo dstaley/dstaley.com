@@ -67,7 +67,7 @@ export async function GET(request) {
             style: {
               width: "90%",
               margin: "0",
-              marginLeft: "40px",
+              marginLeft: "80px",
               textShadow: "10px 10px rgba(0, 0, 0, 0.5)",
               textTransform: "uppercase",
               letterSpacing: "1.5px",
