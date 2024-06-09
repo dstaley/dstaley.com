@@ -37,6 +37,11 @@
           <meta name="twitter:image" content="{{ image | get(key='url') | safe }}">
           <meta property="og:image:width" content="{{ image | get(key='width') | safe }}">
           <meta property="og:image:height" content="{{ image | get(key='height') | safe }}">
+        {%- else -%}
+          <meta property="og:image" content="{{ config.base_url }}/api/og?slug={{ page.relative_path }}">
+          <meta name="twitter:image" content="{{ config.base_url }}/api/og?slug={{ page.relative_path }}">
+          <meta property="og:image:width" content="1200">
+          <meta property="og:image:height" content="630">
         {%- endif -%}
       {%- endif -%}
       {%- if page.permalink -%}
