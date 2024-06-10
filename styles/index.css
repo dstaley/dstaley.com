@@ -1,3 +1,7 @@
+@view-transition {
+    navigation: auto;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

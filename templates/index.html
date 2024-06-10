@@ -31,11 +31,11 @@
     {%- for post in posts -%}
       <div class="flex flex-col gap-y-1" style="view-transition-name: post-{{ post.slug | safe }}">
         <p class="font-thin">{{ post.date | date(format="%B %-d, %Y") }}</p>
-        <a class="text-gray-900 dark:text-gray-100 font-semibold leading-snug" href="{{ post.path | safe }}">
+        <a class="text-gray-900 dark:text-gray-100 font-semibold leading-snug text-pretty" href="{{ post.path | safe }}">
           <h2>{{ post.title }}</h2>
         </a>
         {%- if post.description -%}
-          <p>{{ post.description }}</p>
+          <p class="text-pretty">{{ post.description }}</p>
         {%- endif -%}
       </div>
     {%- endfor -%}
