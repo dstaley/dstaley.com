@@ -111,9 +111,9 @@ export async function GET(request) {
             }
           }),
           h("img", {
-            src: `${BASE_URL}/img/avi.jpg`,
-            width: "300",
-            height: "300",
+            src: `${BASE_URL}/img/head-and-shoulders.png`,
+            width: "400",
+            height: "400",
             style: {
               position: "absolute",
               bottom: 0,
