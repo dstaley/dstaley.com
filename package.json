@@ -1,0 +1,12 @@
+{
+    "name": "dstaley.com",
+    "private": true,
+    "type": "module",
+    "dependencies": {
+        "@vercel/og": "^0.6.2",
+        "yaml": "^2.4.5"
+    },
+    "devDependencies": {
+        "vercel": "^34.2.6"
+    }
+}

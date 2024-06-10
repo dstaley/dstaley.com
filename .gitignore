@@ -3,3 +3,4 @@ static/processed_images
 # Local Netlify folder
 .netlify
 node_modules/
+.vercel
