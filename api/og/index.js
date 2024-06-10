@@ -76,6 +76,9 @@ export async function GET(request) {
   try {
     const fileContents = await readFile(`./content/${slug}`, "utf-8");
     const match = frontmatterRegex.exec(fileContents);
+    if (!match) {
+      throw new Error("unable to parse frontmatter")
+    }
     const matter = yaml.parse(match[1]);
 
     const font = await loadGoogleFont("Lilita One");
@@ -90,9 +93,23 @@ export async function GET(request) {
           fontSize: 72,
           background: "#493cc0",
           color: "white",
-          fontFamily: `"${font.name}"`,
+          fontFamily: font.name,
         },
         children: [
+          matter.extra?.opengraph_image ? h("img", {
+            src: `${BASE_URL}/${matter.extra.opengraph_image}`,
+          }) : null,
+          h("div", {
+            style: {
+              position: "absolute",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 0,
+              backgroundColor: "#493cc0",
+              opacity: 0.75
+            }
+          }),
           h("img", {
             src: `${BASE_URL}/img/avi.jpg`,
             width: "300",
@@ -103,17 +120,30 @@ export async function GET(request) {
               right: 0,
             },
           }),
-          h("p", {
+          h("div", {
             style: {
-              width: "1040px",
-              margin: "0",
-              marginLeft: "80px",
-              textShadow: "8px 8px rgba(0, 0, 0, 0.25)",
-              textTransform: "uppercase",
-              textWrap: "balance",
+              display: "flex",
+              alignItems: "center",
+              position: "absolute",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 0,
             },
-            children: matter.title,
-          }),
+            children: [
+              h("p", {
+                style: {
+                  width: "940px",
+                  margin: "0",
+                  marginLeft: "80px",
+                  textShadow: "8px 8px rgba(0, 0, 0, 0.25)",
+                  textTransform: "uppercase",
+                  textWrap: "balance",
+                },
+                children: matter.title,
+              }),
+            ]
+          })
         ],
       }),
       {
