@@ -1,4 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "zola build --base-url $([ \"$VERCEL_ENV\" = \"production\" ] && echo \"https://dstaley.com\" || echo \"https://$VERCEL_URL\")"
+  "buildCommand": "zola build --base-url $([ \"$VERCEL_ENV\" = \"production\" ] && echo \"https://dstaley.com\" || echo \"https://$VERCEL_URL\")",
+  "functions": {
+    "api/og/index.js": {
+      "includeFiles": "content/**/*.md"
+    }
+  }
 }
