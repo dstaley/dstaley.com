@@ -64,7 +64,7 @@ All this being said, don't take this as advice to be bad at your job, or to take
 
 ## Be okay saying "No"
 
-You don't need to immediately say yes to every idea presented to you. **Your best work will be highly opinionated.** Believe it or not, the customer isn't always right. (A more phrasing would be "the customer is always right _in matters of taste_".) Often their ideas don't account for the full context at play, and likely aren't the best possible solution to the underlying problem. If someone approaches you with a specific solution, take the time to dig into what the _actual_ problem is, and then try to solve _that_ instead of simply saying "Yes" to whatever they've proposed. This is hard sometimes, and impossible in others, but is necessary if you want to have good results.
+You don't need to immediately say yes to every idea presented to you. **Your best work will be highly opinionated.** Believe it or not, the customer isn't always right. (An alternative version I've heard is "the customer is always right _in matters of taste_", which feels more like something I could get behind.) Often their ideas don't account for the full context at play, and likely aren't the best possible solution to the underlying problem. If someone approaches you with a specific solution, take the time to dig into what the _actual_ problem is, and then try to solve _that_ instead of simply saying "Yes" to whatever they've proposed. This is hard sometimes, and impossible in others, but is necessary if you want to have good results.
 
 ## Do everything with kindness
 
