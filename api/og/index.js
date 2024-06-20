@@ -138,7 +138,7 @@ export async function GET(request) {
                   marginLeft: "80px",
                   textShadow: "8px 8px rgba(0, 0, 0, 0.25)",
                   textTransform: "uppercase",
-                  textWrap: "balance",
+                  textWrap: matter.extra.text_wrap ?? "balance",
                 },
                 children: matter.title,
               }),

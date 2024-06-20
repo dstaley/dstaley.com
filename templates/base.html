@@ -19,11 +19,11 @@
     {%- if page.extra.has_opengraph or section.extra.has_opengraph -%}
       <meta property="og:site_name" content="{{ config.title }}">
       {%- if page.title -%}
-        <meta property="og:title" content="{{ page.title | escape }}">
-        <meta name="twitter:title" content="{{ page.title | escape }}">
+        <meta property="og:title" content="{{ page.title }}">
+        <meta name="twitter:title" content="{{ page.title }}">
       {%- else -%}
-        <meta property="og:title" content="{{ config.title | escape }}">
-        <meta name="twitter:title" content="{{ config.title | escape }}">
+        <meta property="og:title" content="{{ config.title }}">
+        <meta name="twitter:title" content="{{ config.title }}">
       {%- endif -%}
       {%- if current_path == "/" -%}
         <meta property="og:type" content="website">
