@@ -1,0 +1,22 @@
+{% set largeImage = resize_image(path=path, width=1600, op='fit_width') %}
+{% set smallImage = resize_image(path=path, width=800, op='fit_width') %}
+{% if caption %}<figure>{% endif %}
+<a href="/{{ path }}">
+    <img
+        alt="{{ alt }}"
+        {% if class %}class="{{ class }}"
+        {% elif caption %}class="m-0"{% endif %}
+        loading="lazy"
+        width="{{ largeImage.width }}"
+        height="{{ largeImage.height }}"
+        src="{{ smallImage.url }}"
+        srcset="
+            {{ smallImage.url }},
+            {{ largeImage.url }} 2x
+        "
+    />
+</a>
+{% if caption %}
+<figcaption class="italic text-sm">{{ caption }}</figcaption>
+</figure>
+{% endif %}
