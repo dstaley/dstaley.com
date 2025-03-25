@@ -9,10 +9,10 @@
         loading="lazy"
         width="{{ largeImage.width }}"
         height="{{ largeImage.height }}"
-        src="{{ smallImage.url }}"
+        src="{{ smallImage.url | regex_replace(pattern="https?:\/\/", rep="//") }}"
         srcset="
-            {{ smallImage.url }},
-            {{ largeImage.url }} 2x
+            {{ smallImage.url | regex_replace(pattern="https?:\/\/", rep="//") }},
+            {{ largeImage.url | regex_replace(pattern="https?:\/\/", rep="//") }} 2x
         "
     />
 </a>
