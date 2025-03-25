@@ -1,2 +1,2 @@
 {% set image = resize_image(path=path, width=width, op=op) %}
-{{ image.url }}
+{{ image.url | regex_replace(pattern="https?:\/\/", rep="//") }}

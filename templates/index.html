@@ -6,10 +6,10 @@
       <img
         class="shadow-md rounded-full mr-4 w-[35px] sm:w-[50px]"
         alt="A photo of Dylan Staley"
-        src="{{ resize_image(path='img/avi.jpg', width=75, height=75) | get(key='url') | safe }}"
+        src="{{ resize_image(path='img/avi.jpg', width=75, height=75) | get(key='url') | regex_replace(pattern="https?:\/\/", rep="//") | safe }}"
         srcset="
-          {{ resize_image(path='img/avi.jpg', width=75, height=75) | get(key='url') | safe }},
-          {{ resize_image(path='img/avi.jpg', width=300, height=300) | get(key='url') | safe }} 2x
+          {{ resize_image(path='img/avi.jpg', width=75, height=75) | get(key='url') | regex_replace(pattern="https?:\/\/", rep="//") | safe }},
+          {{ resize_image(path='img/avi.jpg', width=300, height=300) | get(key='url') | regex_replace(pattern="https?:\/\/", rep="//") | safe }} 2x
         "
         width="75"
         height="75"
