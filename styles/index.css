@@ -1,44 +1,17 @@
-@import 'tailwindcss';
-
-@plugin '@tailwindcss/typography';
-
-@theme {
-  --color-tomato-300: tomato;
-  --color-tomato-600: #e62200;
-
-  --color-shark-950: #282c34;
+@view-transition {
+  navigation: auto;
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
-
-@layer base {
-  @view-transition {
-    navigation: auto;
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-    color-scheme: light dark;
+  color-scheme: light dark;
 }
 
 .links {
-    & a {
-        @apply block p-4 mb-4 border border-tomato-600 dark:border-tomato-300 rounded-lg text-tomato-600 dark:text-tomato-300 font-semibold;
-    }
+  & a {
+      @apply block p-4 mb-4 border border-tomato-600 dark:border-tomato-300 rounded-lg text-tomato-600 dark:text-tomato-300 font-semibold;
+  }
 }
