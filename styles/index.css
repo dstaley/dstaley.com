@@ -15,3 +15,8 @@
       @apply block p-4 mb-4 border border-tomato-600 dark:border-tomato-300 rounded-lg text-tomato-600 dark:text-tomato-300 font-semibold;
   }
 }
+
+/* lil hack to work in browsers using the old flexbox model */
+.flex-col {
+  -webkit-box-orient: vertical;
+}

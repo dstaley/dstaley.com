@@ -3,7 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build:css": "tailwindcss -i ./styles/index.css -o ./static/index.css"
+        "build:css": "tailwindcss -i ./styles/index.css -o ./static/index.css --postcss"
     },
     "dependencies": {
         "@vercel/og": "^0.6.2",
