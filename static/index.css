@@ -1171,16 +1171,18 @@ video {
   display: grid;
 }
 
+.size-\[35px\] {
+  width: 35px;
+  height: 35px;
+}
+
+.size-\[50px\] {
+  width: 50px;
+  height: 50px;
+}
+
 .h-\[500px\] {
   height: 500px;
-}
-
-.w-\[35px\] {
-  width: 35px;
-}
-
-.w-\[50px\] {
-  width: 50px;
 }
 
 .w-full {
@@ -1451,8 +1453,9 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:w-\[50px\] {
+  .sm\:size-\[50px\] {
     width: 50px;
+    height: 50px;
   }
 }
 
