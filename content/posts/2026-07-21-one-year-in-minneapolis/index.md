@@ -1,7 +1,7 @@
 ---
 title: "One Year in Minneapolis"
 description: "Twelve of my favorite things so far after a year of living in the Twin Cities"
-date: 2026-07-21T12:30:00-05:00
+date: 2026-07-21T14:30:00-05:00
 
 extra:
   has_opengraph: true
