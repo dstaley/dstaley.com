@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Instrument+Serif&family=LINE+Seed+JP:wght@700&family=Lekton&display=swap" rel="stylesheet">
+{% endblock head %}
+
+{% block main %}
+  <nav>
+    <button id="back-button" class="absolute top-4 left-4 text-tomato-600 dark:text-tomato-300 font-semibold">&lt; Movies</button>
+  </nav>
+  <script>
+  const fallbackURL = "/movies/";
+
+  document.querySelector("#back-button").addEventListener("click", () => {
+    if ("navigation" in window && navigation.canGoBack) {
+      navigation.back();
+    } else {
+      location.assign(fallbackURL);
+    }
+  });
+</script>
+  <article>
+    <header class="my-12 text-[#22211f] dark:text-white">
+      <p
+        class="lekton-regular border-b border-current pb-2 text-sm uppercase leading-none tracking-[.16em]"
+        style="view-transition-name: movie-{{ page.slug | safe }}-theater"
+      >
+        {{ page.extra.theater }}
+      </p>
+
+      <h1
+        class="instrument-serif-regular mt-8 text-5xl uppercase leading-[.92] tracking-tight sm:text-7xl"
+        style="view-transition-name: movie-{{ page.slug | safe }}-title"
+      >
+        {{ page.title }}
+      </h1>
+
+      <p
+        class="lekton-regular mt-8 text-lg uppercase leading-none tracking-[.08em]"
+        style="view-transition-name: movie-{{ page.slug | safe }}-showtime"
+      >
+        {{ page.date | date(format="%-I:%M%P  %a  %m/%d/%Y") }}
+      </p>
+
+      <div class="mt-8 grid grid-flow-col grid-cols-3 border-y border-current py-4">
+        {%- if page.extra.seat -%}
+          <div
+            class="min-w-0"
+            style="view-transition-name: movie-{{ page.slug | safe }}-seat"
+          >
+            <p class="lekton-regular text-xs tracking-[.16em]">SEAT</p>
+            <p class="line-seed-jp-bold mt-2 inline-block bg-[#22211f] p-2 text-3xl uppercase leading-none text-white dark:bg-white dark:text-[#22211f]">
+              {{ page.extra.seat }}
+            </p>
+          </div>
+        {%- endif -%}
+
+        <div
+          class="min-w-0 {% if page.extra.seat %}border-l border-current pl-4{% endif %}"
+          style="view-transition-name: movie-{{ page.slug | safe }}-rating"
+        >
+          <p class="lekton-regular text-xs tracking-[.16em]">RATING</p>
+          <p class="bree-serif-regular mt-2 text-4xl uppercase leading-none">
+            {{ page.extra.rating | default(value="NR") }}
+          </p>
+        </div>
+
+        {%- if page.extra.screen -%}
+          <div
+            class="min-w-0 border-l border-current pl-4"
+            style="view-transition-name: movie-{{ page.slug | safe }}-screen"
+          >
+            <p class="lekton-regular text-xs tracking-[.16em]">AUD</p>
+            <p class="instrument-serif-regular mt-2 text-4xl uppercase leading-none">
+              {{ page.extra.screen }}
+            </p>
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if page.description -%}
+        <p class="mt-8">{{ page.description }}</p>
+      {%- endif -%}
+    </header>
+    <main class="prose dark:prose-invert prose-a:text-tomato-600 dark:prose-a:text-tomato-300 prose-pre:shadow-lg prose-video:shadow-lg prose-img:rounded-md prose-img:shadow-lg prose-video:rounded-md prose-headings:text-base">{{ page.content | safe }}</main>
+  </article>
+{% endblock %}

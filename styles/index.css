@@ -20,3 +20,27 @@
 .flex-col {
   -webkit-box-orient: vertical;
 }
+
+.line-seed-jp-bold {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lekton-regular {
+  font-family: "Lekton", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bree-serif-regular {
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}

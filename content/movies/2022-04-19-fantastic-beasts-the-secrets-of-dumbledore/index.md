@@ -1,0 +1,10 @@
+---
+title: "FANTASTIC BEASTS: THE SECRETS OF DUMBLEDORE"
+slug: "2022-04-19-fantastic-beasts-the-secrets-of-dumbledore"
+date: "2022-04-19T18:40:00"
+extra:
+  rating: "PG-13"
+  theater: "Queensgate Cinemas 12"
+  seat: "F13"
+  screen: "1"
+---

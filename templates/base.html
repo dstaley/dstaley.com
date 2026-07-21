@@ -64,6 +64,8 @@
 
     <link rel="shortcut icon" href="/img/rocket.png">
 
+    {% block head %}{% endblock head %}
+
     {%- if current_url is starting_with("http://127.0.0.1:1111/") -%}
       <link rel="stylesheet" href="/index.css">
     {%- else -%}
@@ -71,6 +73,6 @@
     {%- endif -%}
   </head>
   <body class="text-gray-700 dark:bg-shark-950 dark:text-gray-300">
-    <div class="max-w-[60ch] mx-auto p-4 mb-32">{% block main %}{% endblock %}</div>
+    <div class="{% block content_width %}max-w-[60ch]{% endblock content_width %} mx-auto p-4 mb-32">{% block main %}{% endblock %}</div>
   </body>
 </html>
