@@ -16,7 +16,7 @@ Back in Washington, your best bet for buying technology was Best Buy. If they di
 
 ## 2. This statue of Snoopy at the Minneapolis-Saint Paul International Airport
 
-![A selfie of me in front of Snoopy The North Star Flying Ace](snoopy.jpeg)
+<img src="snoopy.jpeg" alt="A selfie of me in front of Snoopy The North Star Flying Ace" loading="lazy" width="768" height="1024" />
 
 ## 3. Brito's Burrito
 
@@ -31,8 +31,8 @@ I moved from a city that didn't have a good AMC theater and now live in a metro 
 I could write at length about the Minnesota State Fair. I went on a beautiful 68-degree summer day and had some of the most incredible food I've ever had at a fair. [Paella Depot](https://www.paelladepot.com) was a particular standout, so much so that I went to a street festival the week after the fair to eat it again. Definitely going twice this year, as there were so many delicious options I didn't have the chance to try!
 
 <div class="grid grid-cols-2 gap-2">
-    <img src="paella-depot.jpeg" alt="Chicken and chorizo paella topped with a fried egg" />
-    <img src="grilled-peach.jpeg" alt="A grilled peach with honey and goat butter" />
+    <img src="paella-depot.jpeg" alt="Chicken and chorizo paella topped with a fried egg" loading="lazy" width="816" height="1088" />
+    <img src="grilled-peach.jpeg" alt="A grilled peach with honey and goat butter" loading="lazy" width="816" height="1088" />
 </div>
 
 ## 6. All the green
@@ -47,11 +47,11 @@ Even though it snowed in Central Washington, I've never experienced the level of
 
 Every year, the pizza chain Pizza Lucé holds an event called the Tour de Lucé, where participants bike between the locations throughout the Twin Cities. I had just purchased my first bike, so I wasn't quite ready for an 80-mile tour on a 90-degree day, but it was still great to spend a morning biking through the southwestern part of the metro. I loved seeing so many people doing the same.
 
-![The parking lot of a Pizza Lucé location during the Tour de Lucé, filled with bikes](tour-de-luce.jpeg)
+<img src="tour-de-luce.jpeg" alt="The parking lot of a Pizza Lucé location during the Tour de Lucé, filled with bikes" loading="lazy" width="1024" height="768" />
 
 ## 9. Hennepin County Library cards
 
-![Holding my Hennepin County Library card out in front of me, with the skyline of downtown Minneapolis in the background. The library card has a rainbow design, with the text "Be proud at your library"](library-card.jpeg)
+<img src="library-card.jpeg" alt="Holding my Hennepin County Library card out in front of me, with the skyline of downtown Minneapolis in the background. The library card has a rainbow design, with the text &quot;Be proud at your library&quot;" loading="lazy" width="768" height="1024" />
 
 ## 10. The iced vanilla latte I got from Duluth Coffee Company
 
@@ -62,8 +62,8 @@ During a trip up to Duluth, I got an iced vanilla latte from the flagship locati
 Since moving to the Twin Cities, I've had the chance to see [Atsuko Okatsuka](https://atsukocomedy.com), [Lucy Darling](https://www.carisahendrix.com), Lady Gaga, and [Zee Machine](https://www.instagram.com/zeemachine/?hl=en) (and am seeing Hilary Duff this weekend!). I love that I'm able to see nationally recognized artists without having to fly or board my dogs.
 
 <div class="grid grid-cols-2 gap-2">
-    <img src="lady-gaga.jpeg" alt="The view of the stage from my seat at the Lady Gaga concert" />
-    <img src="zee-machine.jpeg" alt="Zee Machine performing on stage wearing a leather vest, shirtless, and red wings" />
+    <img src="lady-gaga.jpeg" alt="The view of the stage from my seat at the Lady Gaga concert" loading="lazy" width="768" height="1024" />
+    <img src="zee-machine.jpeg" alt="Zee Machine performing on stage wearing a leather vest, shirtless, and red wings" loading="lazy" width="768" height="1024" />
 </div>
 
 ## 12. The rejection of fascism
