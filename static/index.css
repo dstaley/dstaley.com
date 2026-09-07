@@ -1409,6 +1409,10 @@ video {
   -webkit-box-orient: vertical;
 }
 
+.font-stretch-semi-condensed {
+  font-stretch: 87.5%;
+}
+
 @media (prefers-color-scheme: dark) {
   .dark\:prose-invert {
     --tw-prose-body: var(--tw-prose-invert-body);

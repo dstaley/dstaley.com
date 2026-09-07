@@ -20,3 +20,7 @@
 .flex-col {
   -webkit-box-orient: vertical;
 }
+
+.font-stretch-semi-condensed {
+  font-stretch: 87.5%;
+}
