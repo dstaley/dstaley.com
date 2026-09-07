@@ -87,7 +87,7 @@ export async function GET(request) {
     }
     const matter = yaml.parse(match[1]);
 
-    if (slug.startsWith("movies/")) {
+    if (slug.startsWith("movies/") && !slug.endsWith("/_index.md")) {
       return buildMovieTicketImage({
         title: matter.title,
         rating: matter.extra?.rating ?? "NR",
@@ -466,4 +466,3 @@ async function buildMovieTicketImage(
     return new Response("500 Internal Server Error", { status: 500 });
   }
 }
-

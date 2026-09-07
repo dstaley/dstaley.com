@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {%- if page and page.title -%}
       <title>{{ page.title }} - {{ config.title }}</title>
+    {%- elif section and section.title -%}
+      <title>{{ section.title }} - {{ config.title }}</title>
     {%- else -%}
       <title>{{ config.title }}</title>
     {%- endif -%}
@@ -15,6 +17,8 @@
       {%- set description = page.title ~ " at " ~ page.extra.theater ~ " — " ~ movie_date -%}
     {%- elif page and page.description -%}
       {%- set description = page.description -%}
+    {%- elif section and section.description -%}
+      {%- set description = section.description -%}
     {%- else -%}
       {%- set description = config.description -%}
     {%- endif -%}
@@ -25,6 +29,9 @@
       {%- if page and page.title -%}
         <meta property="og:title" content="{{ page.title }}">
         <meta name="twitter:title" content="{{ page.title }}">
+      {%- elif section and section.title -%}
+        <meta property="og:title" content="{{ section.title }}">
+        <meta name="twitter:title" content="{{ section.title }}">
       {%- else -%}
         <meta property="og:title" content="{{ config.title }}">
         <meta name="twitter:title" content="{{ config.title }}">
@@ -34,9 +41,15 @@
         <meta property="og:image" content="{{ resize_image(path='img/avi.jpg', width=300, height=300) | get(key='url') | safe }}">
         <meta name="twitter:image" content="{{ resize_image(path='img/avi.jpg', width=300, height=300) | get(key='url') | safe }}">
       {%- else -%}
-        <meta property="og:type" content="article">
-        <meta property="og:image" content="{{ config.base_url }}/api/og?slug={{ page.relative_path }}">
-        <meta name="twitter:image" content="{{ config.base_url }}/api/og?slug={{ page.relative_path }}">
+        {%- if page -%}
+          {%- set image_path = page.relative_path -%}
+          <meta property="og:type" content="article">
+        {%- else -%}
+          {%- set image_path = section.relative_path -%}
+          <meta property="og:type" content="website">
+        {%- endif -%}
+        <meta property="og:image" content="{{ config.base_url }}/api/og?slug={{ image_path }}">
+        <meta name="twitter:image" content="{{ config.base_url }}/api/og?slug={{ image_path }}">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
       {%- endif -%}
