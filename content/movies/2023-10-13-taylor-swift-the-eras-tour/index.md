@@ -1,5 +1,5 @@
 ---
-title: "TAYLOR SWIFT: THE ERAS TOUR"
+title: "Taylor Swift: The Eras Tour"
 slug: "2023-10-13-taylor-swift-the-eras-tour"
 date: "2023-10-13T19:00:00"
 extra:

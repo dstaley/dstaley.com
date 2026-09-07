@@ -1,5 +1,5 @@
 ---
-title: "FANTASTIC BEASTS: THE CRIMES OF GRINDELWALD"
+title: "Fantastic Beasts: The Crimes of Grindlewald"
 slug: "2018-11-18-fantastic-beasts-the-crimes-of-grindelwald"
 date: "2018-11-18T19:00:00"
 extra:

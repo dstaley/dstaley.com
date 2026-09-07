@@ -8,3 +8,5 @@ extra:
   seat: "K12"
   screen: "7"
 ---
+
+When they scanned my ticket for this movie and handed me 3D glasses I was so disappointed. To this day I'm convinced the film was incorrectly listed in the AMC app because I avoid 3D movies like the plague.

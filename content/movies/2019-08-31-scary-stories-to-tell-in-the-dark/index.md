@@ -1,5 +1,5 @@
 ---
-title: "SCARY STORIES TO TELL IN THE DARK"
+title: "Scary Stories to Tell in the Dark"
 slug: "2019-08-31-scary-stories-to-tell-in-the-dark"
 date: "2019-08-31T19:20:00"
 extra:

@@ -1,5 +1,5 @@
 ---
-title: "IT CHAPTER TWO"
+title: "It: Chapter Two"
 slug: "2019-09-08-it-chapter-two"
 date: "2019-09-08T18:40:00"
 extra:

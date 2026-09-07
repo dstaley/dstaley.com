@@ -1,5 +1,5 @@
 ---
-title: "WICKED"
+title: "Wicked"
 slug: "2024-11-30-wicked"
 date: "2024-11-30T18:00:00"
 extra:

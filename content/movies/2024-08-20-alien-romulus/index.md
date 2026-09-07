@@ -1,5 +1,5 @@
 ---
-title: "ALIEN: ROMULUS"
+title: "Alien: Romulus"
 slug: "2024-08-20-alien-romulus"
 date: "2024-08-20T19:00:00"
 extra:

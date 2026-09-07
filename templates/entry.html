@@ -1,0 +1,23 @@
+{# Dates are preformatted strings. A URL selects the listing presentation. #}
+{% macro heading(title, description, date, slug, url="", additional_description="") %}
+  <div class="flex flex-col gap-y-1{% if not url %} my-12{% endif %}" style="view-transition-name: entry-{{ slug | safe }}">
+    <p class="font-thin">{{ date }}</p>
+    {% if url %}
+      <a class="text-gray-900 dark:text-gray-100 font-semibold leading-snug text-pretty" href="{{ url | safe }}">
+        <h2>{{ title }}</h2>
+      </a>
+    {% else %}
+      <h1 class="dark:text-white font-semibold leading-snug">{{ title }}</h1>
+    {% endif %}
+    {% if description %}
+      <p{% if url %} class="text-pretty"{% endif %}>{{ description }}</p>
+    {% endif %}
+    {% if additional_description %}
+      <p>{{ additional_description }}</p>
+    {% endif %}
+  </div>
+{% endmacro heading %}
+
+{% macro movie_description(theater, screen="", seat="") -%}
+  {{ theater }}{%- if screen %} | Aud. {{ screen }}{%- endif -%}{%- if seat %} | Seat {{ seat }}{%- endif -%}
+{%- endmacro movie_description %}

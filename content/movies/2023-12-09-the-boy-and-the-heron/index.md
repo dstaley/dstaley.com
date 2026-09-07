@@ -1,5 +1,5 @@
 ---
-title: "THE BOY AND THE HERON"
+title: "The Boy and the Heron"
 slug: "2023-12-09-the-boy-and-the-heron"
 date: "2023-12-09T15:50:00"
 extra:

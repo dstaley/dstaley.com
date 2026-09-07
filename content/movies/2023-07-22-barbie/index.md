@@ -1,5 +1,5 @@
 ---
-title: "BARBIE"
+title: "Barbie"
 slug: "2023-07-22-barbie"
 date: "2023-07-22T21:20:00"
 extra:

@@ -1,5 +1,5 @@
 ---
-title: "AVENGERS: ENDGAME"
+title: "Avengers: Endgame"
 slug: "2019-04-28-avengers-endgame"
 date: "2019-04-28T19:20:00"
 extra:

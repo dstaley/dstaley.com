@@ -1,5 +1,5 @@
 ---
-title: "POKEMON DETECTIVE PIKACHU"
+title: "Pokémon Detective Pikachu"
 slug: "2019-05-10-pokemon-detective-pikachu"
 date: "2019-05-10T21:35:00"
 extra:

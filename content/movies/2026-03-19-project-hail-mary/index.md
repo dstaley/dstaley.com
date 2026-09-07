@@ -8,3 +8,5 @@ extra:
   seat: "L12"
   screen: "8"
 ---
+
+I do need to admit that after watching this a second time I still did not understand the science behind what was happening, so I had to look everything up.

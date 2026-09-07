@@ -1,5 +1,5 @@
 ---
-title: "FANTASTIC BEASTS: THE SECRETS OF DUMBLEDORE"
+title: "Fantastic Beasts: The Secrets of Dumbledore"
 slug: "2022-04-19-fantastic-beasts-the-secrets-of-dumbledore"
 date: "2022-04-19T18:40:00"
 extra:

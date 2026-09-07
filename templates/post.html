@@ -1,15 +1,15 @@
 {% extends "base.html" %}
+{% import "entry.html" as entry %}
 
 {% block main %}
   {% include "back_button.html" %}
   <article>
-    <div class="flex flex-col gap-y-1 my-12" style="view-transition-name: post-{{ page.slug | safe }}">
-      <p class="font-thin">{{ page.date | date(format="%B %-d, %Y") }}</p>
-      <h1 class="dark:text-white font-semibold leading-snug">{{ page.title }}</h1>
-      {%- if page.description -%}
-        <p>{{ page.description }}</p>
-      {%- endif -%}
-    </div>
+    {{ entry::heading(
+      title=page.title,
+      description=page.description | default(value=""),
+      date=page.date | date(format="%B %-d, %Y"),
+      slug=page.slug
+    ) }}
     <main class="prose dark:prose-invert prose-a:text-tomato-600 dark:prose-a:text-tomato-300 prose-pre:shadow-lg prose-video:shadow-lg prose-img:rounded-md prose-img:shadow-lg prose-video:rounded-md prose-headings:text-base">{{ page.content | safe }}</main>
   </article>
 {% endblock %}

@@ -8,3 +8,5 @@ extra:
   seat: "E7"
   screen: "2"
 ---
+
+It's funny that in a film about a demonic spirit manefesting as the person you desire the most and trying to kill you that it was actually the _lesser_ villian, with the primary one being homophobia.

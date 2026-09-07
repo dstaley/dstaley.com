@@ -8,3 +8,5 @@ extra:
   seat: "H11"
   screen: "6"
 ---
+
+While I wasn't the biggest fan of the album itself, I do think this was such a cool way to allow people to experience the album front-to-back. There's a handful of artists I'd love to see get the same treatment, but unfortunately I think basically none of them have the cultural pull that would be necessary to make that happen.

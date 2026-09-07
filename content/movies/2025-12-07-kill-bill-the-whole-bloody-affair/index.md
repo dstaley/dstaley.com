@@ -8,3 +8,5 @@ extra:
   screen: "12"
   rating: "NR"
 ---
+
+Now this was a theatrical event! I've only seen _Kill Bill_ a handful of times, but watching it in this new recut presentation clearly shows that Quentin Tarantino had a good idea when he tried to pitch this as one film. If I have the pleasure of coming across someone who hasn't seen _Kill Bill_, this is without a doubt the version I'd show to them. I'm so glad they released this on 4K Blu-ray so that I can have that chance!
