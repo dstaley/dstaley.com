@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "entry.html" as entry %}
 
 {%- block main -%}
   <header class="mb-4">
@@ -30,13 +29,13 @@
     {%- set posts_section = get_section(path ="posts/_index.md") -%}
     {%- set posts = posts_section.pages -%}
     {%- for post in posts -%}
-      {{ entry::heading(
-        title=post.title,
-        description=post.description | default(value=""),
-        date=post.date | date(format="%B %-d, %Y"),
-        slug=post.slug,
-        url=post.path
-      ) }}
+      {{ <entry.heading
+        title={post.title}
+        description={post.description or ""}
+        date={post.date | date(format="%B %-d, %Y")}
+        slug={post.slug}
+        url={post.path}
+      /> }}
     {%- endfor -%}
   </div>
 {% endblock %}

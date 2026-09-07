@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "entry.html" as entry %}
 
 {% block main %}
   {% include "back_button.html" %}
@@ -10,14 +9,14 @@
     {%- set movies_section = get_section(path ="movies/_index.md") -%}
     {%- set movies = movies_section.pages -%}
     {%- for movie in movies -%}
-      {% set description = entry::movie_description(theater=movie.extra.theater, screen=movie.extra.screen | default(value=""), seat=movie.extra.seat | default(value="")) %}
-      {{ entry::heading(
-        title=movie.title,
-        description=description,
-        date=movie.date | date(format="  %a %B %-d, %Y  @ %-I:%M%P"),
-        slug=movie.slug,
-        url=movie.path
-      ) }}
+      {% set description %}{{ <entry.movie_description theater={movie.extra.theater} screen={movie.extra.screen or ""} seat={movie.extra.seat or ""} /> }}{% endset %}
+      {{ <entry.heading
+        title={movie.title}
+        description={description}
+        date={movie.date | date(format="  %a %B %-d, %Y  @ %-I:%M%P")}
+        slug={movie.slug}
+        url={movie.path}
+      /> }}
     {%- endfor -%}
   </div>
   </section>

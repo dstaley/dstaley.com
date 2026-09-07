@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {%- if page.title -%}
+    {%- if page and page.title -%}
       <title>{{ page.title }} - {{ config.title }}</title>
     {%- else -%}
       <title>{{ config.title }}</title>
@@ -13,16 +13,16 @@
     {%- if page and "movies/_index.md" in page.ancestors -%}
       {%- set movie_date = page.date | date(format="%B %-d, %Y") -%}
       {%- set description = page.title ~ " at " ~ page.extra.theater ~ " — " ~ movie_date -%}
-    {%- elif page.description -%}
+    {%- elif page and page.description -%}
       {%- set description = page.description -%}
     {%- else -%}
       {%- set description = config.description -%}
     {%- endif -%}
     <meta name="description" content="{{ description }}">
 
-    {%- if page.extra.has_opengraph or section.extra.has_opengraph -%}
+    {%- if (page and page.extra.has_opengraph) or (section and section.extra.has_opengraph) -%}
       <meta property="og:site_name" content="{{ config.title }}">
-      {%- if page.title -%}
+      {%- if page and page.title -%}
         <meta property="og:title" content="{{ page.title }}">
         <meta name="twitter:title" content="{{ page.title }}">
       {%- else -%}
@@ -40,10 +40,10 @@
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
       {%- endif -%}
-      {%- if page.permalink -%}
+      {%- if page and page.permalink -%}
         <meta property="og:url" content="{{ page.permalink | safe }}">
         <meta name="twitter:url" content="{{ page.permalink | safe }}">
-      {%- elif section.permalink -%}
+      {%- elif section and section.permalink -%}
         <meta property="og:url" content="{{ section.permalink | safe }}">
         <meta name="twitter:url" content="{{ section.permalink | safe }}">
       {%- endif -%}
@@ -66,7 +66,7 @@
 
     {% block head %}{% endblock head %}
 
-    {%- if current_url is starting_with("http://127.0.0.1:1111/") -%}
+    {%- if current_url is starting_with(pat="http://127.0.0.1:1111/") -%}
       <link rel="stylesheet" href="/index.css">
     {%- else -%}
       <style>{{ load_data(path="static/index.css") | trim | safe }}</style>

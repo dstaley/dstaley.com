@@ -1,5 +1,5 @@
 {# Dates are preformatted strings. A URL selects the listing presentation. #}
-{% macro heading(title, description, date, slug, url="", additional_description="") %}
+{% component entry.heading(title, description, date, slug, url="", additional_description="") %}
   <div class="flex flex-col gap-y-1{% if not url %} my-12{% endif %}" style="view-transition-name: entry-{{ slug | safe }}">
     <p class="font-thin">{{ date }}</p>
     {% if url %}
@@ -16,8 +16,8 @@
       <p>{{ additional_description }}</p>
     {% endif %}
   </div>
-{% endmacro heading %}
+{% endcomponent entry.heading %}
 
-{% macro movie_description(theater, screen="", seat="") -%}
+{% component entry.movie_description(theater, screen="", seat="") -%}
   {{ theater }}{%- if screen %} | Aud. {{ screen }}{%- endif -%}{%- if seat %} | Seat {{ seat }}{%- endif -%}
-{%- endmacro movie_description %}
+{%- endcomponent entry.movie_description %}

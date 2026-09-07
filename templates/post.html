@@ -1,15 +1,14 @@
 {% extends "base.html" %}
-{% import "entry.html" as entry %}
 
 {% block main %}
   {% include "back_button.html" %}
   <article>
-    {{ entry::heading(
-      title=page.title,
-      description=page.description | default(value=""),
-      date=page.date | date(format="%B %-d, %Y"),
-      slug=page.slug
-    ) }}
+    {{ <entry.heading
+      title={page.title}
+      description={page.description or ""}
+      date={page.date | date(format="%B %-d, %Y")}
+      slug={page.slug}
+    /> }}
     <main class="prose dark:prose-invert prose-a:text-tomato-600 dark:prose-a:text-tomato-300 prose-pre:shadow-lg prose-video:shadow-lg prose-img:rounded-md prose-img:shadow-lg prose-video:rounded-md prose-headings:text-base">{{ page.content | safe }}</main>
   </article>
 {% endblock %}

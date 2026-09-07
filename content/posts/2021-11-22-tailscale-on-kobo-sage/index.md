@@ -115,10 +115,10 @@ After authenticating, the final step was to open a Tailscale-only URL in the Kob
         alt="Kobo Sage displaying a webpage with the heading You're connected over Tailscale"
         loading="lazy"
         srcset="
-            {{ resize_image(path='img/tailscale-on-kobo.jpg', width=800, op='fit_width') }},
-            {{ resize_image(path='img/tailscale-on-kobo.jpg', width=1600, op='fit_width') }} 2x
+            {{ resize_image(path='img/tailscale-on-kobo.jpg', width=800, op='fit_width') | get(key="url") | replace(from="https://", to="//") | safe }},
+            {{ resize_image(path='img/tailscale-on-kobo.jpg', width=1600, op='fit_width') | get(key="url") | replace(from="https://", to="//") | safe }} 2x
         "
-        src="{{ resize_image(path='img/tailscale-on-kobo.jpg', width=800, op='fit_width') }}"
+        src="{{ resize_image(path='img/tailscale-on-kobo.jpg', width=800, op='fit_width') | get(key="url") | replace(from="https://", to="//") | safe }}"
         width="800"
         height="1066"
     />

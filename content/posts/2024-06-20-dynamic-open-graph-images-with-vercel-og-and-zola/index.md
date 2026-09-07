@@ -20,6 +20,7 @@ The next question that you probably have is how can you install JavaScript depen
 
 So now that we know how to create API routes and install JavaScript dependencies, let's generate some Open Graph images. Dropping the following example from Vercel into `/api/og.jsx` should make the `/api/og` URL return a static "Hello, world!" image.
 
+{% raw %}
 ```tsx
 import { ImageResponse } from '@vercel/og'
 
@@ -41,6 +42,7 @@ export function GET() {
   )
 }
 ```
+{% endraw %}
 
 However, if you run this locally and try to access `/api/og`, you'll get a `404 NOT_FOUND` error. This is because the Vercel CLI by itself doesn't generate API routes from files ending in `.jsx`. If you try to simply rename the file to `og.js`, you'll get `Error: Unexpected token '<'`. This makes sense given that we have JSX in a `.js` file. Ultimately, I wasn't able to figure out how to get the Vercel CLI to work well with JSX. However, at the end of the day JSX is transformed to plain JavaScript anyway, so we can just perform the transform manually. [Satori](https://github.com/vercel/satori), the underlying engine used by `@vercel/og` that renders markup to images, expects objects with a `type` property that contains a string value and a `props` property containing, well, props. This is also where the `children` prop goes. Without JSX, our example from above looks like this:
 
