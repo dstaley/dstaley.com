@@ -3,6 +3,7 @@ title: "One Night Only - Singles Opening Night Event"
 slug: "2026-08-06-one-night-only"
 date: "2026-08-06T19:00:00"
 extra:
+  has_opengraph: true
   rating: "R"
   theater: "AMC Southdale 16"
   seat: "F9"

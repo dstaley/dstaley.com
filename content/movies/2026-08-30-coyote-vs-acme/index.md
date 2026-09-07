@@ -3,6 +3,7 @@ title: "Coyote vs. Acme"
 slug: "2026-08-30-coyote-vs-acme"
 date: "2026-08-30T13:15:00"
 extra:
+  has_opengraph: true
   rating: "PG"
   theater: "AMC Southdale 16"
   seat: "E7"

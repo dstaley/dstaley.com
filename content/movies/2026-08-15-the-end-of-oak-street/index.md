@@ -3,6 +3,7 @@ title: "The End of Oak Street"
 slug: "2026-08-15-the-end-of-oak-street"
 date: "2026-08-15T19:30:00"
 extra:
+  has_opengraph: true
   rating: "PG-13"
   theater: "AMC Rosedale 14"
   seat: "D9"

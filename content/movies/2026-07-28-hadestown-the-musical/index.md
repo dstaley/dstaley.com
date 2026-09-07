@@ -3,6 +3,7 @@ title: "Hadestown: The Musical"
 slug: "2026-07-28-hadestown-the-musical"
 date: "2026-07-28T18:15:00"
 extra:
+  has_opengraph: true
   rating: "NR"
   theater: "AMC Southdale 16"
   seat: "F10"

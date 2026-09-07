@@ -3,6 +3,7 @@ title: "Teenage Sex and Death at Camp Miasma"
 slug: "2026-08-24-teenage-sex-and-death-at-camp-miasma"
 date: "2026-08-24T21:20:00"
 extra:
+  has_opengraph: true
   rating: "R"
   theater: "AMC Southdale 16"
   seat: "13"

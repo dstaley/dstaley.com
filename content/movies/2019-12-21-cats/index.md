@@ -3,6 +3,7 @@ title: "Cats"
 slug: "2019-12-21-cats"
 date: "2019-12-21T21:30:00"
 extra:
+  has_opengraph: true
   rating: "PG"
   theater: "Queensgate Cinemas 12"
   seat: "G9"

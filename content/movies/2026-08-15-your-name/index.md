@@ -3,6 +3,7 @@ title: "Your Name. 10th Anniversary"
 slug: "2026-08-15-your-name"
 date: "2026-08-15T11:15:00"
 extra:
+  has_opengraph: true
   rating: "PG"
   theater: "AMC Southdale 16"
   seat: "C8"

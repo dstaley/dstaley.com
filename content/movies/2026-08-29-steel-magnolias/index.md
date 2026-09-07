@@ -3,6 +3,7 @@ title: "Steel Magnolias"
 slug: "2026-08-29-steel-magnolias"
 date: "2026-08-29T12:00:00"
 extra:
+  has_opengraph: true
   rating: "PG"
   theater: "AMC Southdale 16"
   seat: "F8"
