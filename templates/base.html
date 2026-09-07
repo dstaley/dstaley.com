@@ -10,11 +10,15 @@
       <title>{{ config.title }}</title>
     {%- endif -%}
     <meta name="theme-color" content="tomato">
-    {%- if page.description -%}
-      <meta name="description" content="{{ page.description }}">
+    {%- if page and "movies/_index.md" in page.ancestors -%}
+      {%- set movie_date = page.date | date(format="%B %-d, %Y") -%}
+      {%- set description = page.title ~ " at " ~ page.extra.theater ~ " — " ~ movie_date -%}
+    {%- elif page.description -%}
+      {%- set description = page.description -%}
     {%- else -%}
-      <meta name="description" content="{{ config.description }}">
+      {%- set description = config.description -%}
     {%- endif -%}
+    <meta name="description" content="{{ description }}">
 
     {%- if page.extra.has_opengraph or section.extra.has_opengraph -%}
       <meta property="og:site_name" content="{{ config.title }}">
@@ -43,13 +47,8 @@
         <meta property="og:url" content="{{ section.permalink | safe }}">
         <meta name="twitter:url" content="{{ section.permalink | safe }}">
       {%- endif -%}
-      {%- if page.description -%}
-        <meta property="og:description" content="{{ page.description }}">
-        <meta name="twitter:description" content="{{ page.description }}">
-      {%- else -%}
-        <meta property="og:description" content="{{ config.description }}">
-        <meta name="twitter:description" content="{{ config.description }}">
-      {%- endif -%}
+      <meta property="og:description" content="{{ description }}">
+      <meta name="twitter:description" content="{{ description }}">
       {%- if current_path == "/" -%}
         <meta name="twitter:card" content="summary">
       {%- else -%}
