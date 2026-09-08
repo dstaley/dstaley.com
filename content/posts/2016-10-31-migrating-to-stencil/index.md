@@ -22,7 +22,7 @@ Before we could even begin with Stencil, we realized that there was one restrict
 So, with just a few short lines of code [I sent in a pull request](https://github.com/bigcommerce/paper/pull/97) that enables theme developers to keep large files locally in their project, but reference them in a way that when in production, a remote resource is served. For instance
 
 ```handlebars
-{% raw %}{{cdn "imgix:really-large-image.png"}}{% endraw %}
+{{ '{% raw %}{{cdn "imgix:really-large-image.png"}}{% endraw %}' }}
 ```
 
 would become

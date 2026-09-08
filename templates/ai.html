@@ -7,6 +7,6 @@
       <h1 class="dark:text-white font-semibold leading-snug">{{ page.title }}</h1>
       <p>Last updated: {{ page.date | date(format="%B %-d, %Y") }}</p>
     </div>
-    <main class="prose dark:prose-invert prose-a:text-tomato-600 dark:prose-a:text-tomato-300 prose-pre:shadow-lg prose-video:shadow-lg prose-img:rounded-md prose-img:shadow-lg prose-video:rounded-md prose-headings:text-base">{{ page.content | safe }}</main>
+    <main class="prose max-w-none dark:prose-invert prose-a:text-tomato-600 dark:prose-a:text-tomato-300 prose-pre:shadow-lg prose-video:shadow-lg prose-img:rounded-md prose-img:shadow-lg prose-video:rounded-md prose-headings:text-base">{{ page.content | safe }}</main>
   </article>
 {% endblock %}

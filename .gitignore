@@ -4,3 +4,4 @@ static/processed_images
 .netlify
 node_modules/
 .vercel
+.pnpm-store/

@@ -1,0 +1,11 @@
+---
+title: "Sonic the Hedgehog 3"
+slug: "2024-12-19-sonic-the-hedgehog-3"
+date: "2024-12-19T18:30:00"
+extra:
+  has_opengraph: true
+  rating: "PG"
+  theater: "Queensgate Cinemas 12"
+  seat: "G12"
+  screen: "12"
+---

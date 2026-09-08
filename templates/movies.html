@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main %}
+  {% include "back_button.html" %}
+  <section class="my-12">
+    <h1 class="text-gray-900 dark:text-gray-100 font-semibold leading-snug">{{ section.title }}</h1>
+
+    <div class="flex flex-col gap-y-8 mt-10">
+    {%- set movies_section = get_section(path ="movies/_index.md") -%}
+    {%- set movies = movies_section.pages -%}
+    {%- for movie in movies -%}
+      {% set description %}{{ <entry.movie_description theater={movie.extra.theater} screen={movie.extra.screen or ""} seat={movie.extra.seat or ""} /> }}{% endset %}
+      {{ <entry.heading
+        title={movie.title}
+        description={description}
+        date={movie.date | date(format="  %a %B %-d, %Y  @ %-I:%M%P")}
+        slug={movie.slug}
+        url={movie.path}
+      /> }}
+    {%- endfor -%}
+  </div>
+  </section>
+{% endblock %}
