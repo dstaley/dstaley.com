@@ -23,7 +23,7 @@
     </p>
   </header>
 
-  <div class="prose dark:prose-invert prose-a:text-tomato-600 dark:prose-a:text-tomato-300">{{ section.content | safe -}}</div>
+  <div class="prose max-w-none dark:prose-invert prose-a:text-tomato-600 dark:prose-a:text-tomato-300">{{ section.content | safe -}}</div>
 
   <div class="flex flex-col gap-y-8 mt-10">
     {%- set posts_section = get_section(path ="posts/_index.md") -%}

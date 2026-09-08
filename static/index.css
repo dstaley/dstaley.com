@@ -1193,8 +1193,12 @@ video {
   width: 100%;
 }
 
-.max-w-\[60ch\] {
-  max-width: 60ch;
+.max-w-\[70ch\] {
+  max-width: 70ch;
+}
+
+.max-w-none {
+  max-width: none;
 }
 
 .grow {
