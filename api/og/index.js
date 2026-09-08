@@ -130,8 +130,8 @@ export async function GET(request) {
           }),
           h("img", {
             src: `${BASE_URL}/img/head-and-shoulders.png`,
-            width: "400",
-            height: "400",
+            width: 400,
+            height: 400,
             style: {
               position: "absolute",
               bottom: 0,
