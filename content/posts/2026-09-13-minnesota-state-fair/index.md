@@ -1,7 +1,7 @@
 ---
 title: "Everything I Ate and Drank at the 2026 Minnesota State Fair"
 description: "It's a good thing the State Fair is only around for twelve days a year because my wallet wouldn't stand a chance otherwise."
-date: 2026-08-13T12:30:00-05:00
+date: 2026-09-13T12:30:00-05:00
 
 extra:
   has_opengraph: true
