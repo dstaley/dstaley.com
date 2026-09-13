@@ -22,3 +22,22 @@
 </figure>
 {% endif %}
 {% endcomponent lazy_image %}
+
+{% component two_up(src, alt, base_path) %}
+{% set meta = get_image_metadata(path=base_path ~ src) %}
+<div class="grid grid-cols-1 items-start gap-6 sm:grid-cols-2">
+<img
+    class="my-0 block h-auto w-full"
+    src="{{ src }}"
+    alt="{{ alt }}"
+    width="{{ meta.width }}"
+    height="{{ meta.height }}"
+    loading="lazy"
+>
+<div class="min-w-0 [&>:first-child]:mt-0 [&>:last-child]:mb-0">
+
+{{ body }}
+
+</div>
+</div>
+{% endcomponent two_up %}
